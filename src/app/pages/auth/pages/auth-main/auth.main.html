@@ -1,0 +1,11 @@
+<div class="auth-wrapper" [ngStyle]="{flexDirection: type === 'login'  ? 'row' : 'row-reverse'}">
+    <div class="auth-container-action" [@appearFromAbove]="animationAppear">
+        <ng-container>
+            <router-outlet></router-outlet>
+        </ng-container>
+    </div>
+    <div class="auth-container-placholder" [@slideInOut]='animation'>
+        <app-placeholder [type]="type"></app-placeholder>
+    </div>
+</div>
+

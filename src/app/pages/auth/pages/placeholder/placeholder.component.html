@@ -1,0 +1,11 @@
+<div class="container">
+ <div class="close-button--{{type === 'login' ? 'left' : 'right'}}">
+  <mat-icon [ngStyle]="{'color':'white','width':'48px','height':'48px','font-size':'48px'} " inline="true" routerLink="/" >close</mat-icon>
+ </div>
+ <ng-container *ngIf="type === 'login' else register">
+  <button class="button" routerLink="/auth/registration">You can register</button>
+ </ng-container>
+ <ng-template #register>
+  <button class="button" routerLink="/auth/login">You can login</button>
+ </ng-template>
+</div>
