@@ -1,0 +1,85 @@
+@import '../scss/fonts';
+@import '../scss/colors';
+@import '../scss/loader';
+
+.wm-loader {
+  position: relative;
+  display: inline-block;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__error,
+  &__percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__error {
+    path {
+      fill: box-color(negative);
+    }
+  }
+
+  &__percent {
+    font-weight: 500;
+    font-size: 20px;
+    color: box-color(grey-darkest);
+    margin-left: 4px;
+  }
+
+  &-title {
+    margin: 48px 0 10px 0;
+  }
+
+  &-description {
+    font-weight: 300;
+    font-size: 14px;
+    color: box-color(grey-darker);
+    max-width: 315px;
+    text-align: center;
+  }
+
+  &__spinner {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__spinner-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--error {
+      z-index: 10;
+    }
+  }
+}
+
+.wm-loader-circle {
+  &__primary {
+    stroke: box-color(primary);
+  }
+
+  &__secondary {
+    stroke: box-color(secondary);
+  }
+
+  &__primary-on-contrast-background {
+    stroke: box-color(primary-on-contrast-background);
+  }
+
+  &__secondary-on-contrast-background {
+    stroke: box-color(secondary-on-contrast-background);
+  }
+}
+
+.wm-loader-circle-background {
+  stroke: box-color(grey-lightest);
+}

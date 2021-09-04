@@ -1,0 +1,27 @@
+<div class="wm-segmented-controls">
+  <div
+    *ngFor="let option of options"
+    (click)="changeSelected(option)"
+    class="wm-caption wm-segmented-controls__item"
+    [ngClass]="{ 'wm-segmented-controls__item--selected': option === selected }"
+    [ngStyle]="{ 'width.px': itemWidthPx }"
+  >
+    {{ option }}
+  </div>
+  <ng-container
+    *ngIf="{
+      selectedIndex: selected
+    } as bubbleData"
+  >
+    <div
+      *ngIf="!!selected"
+      [ngStyle]="{
+        'width.px': itemWidthPx,
+        transform: 'translateX(' + itemWidthPx * bubbleData?.selectedIndex + 'px)'
+      }"
+      class="wm-segmented-controls__selected-bubble"
+    >
+      <div></div>
+    </div>
+  </ng-container>
+</div>

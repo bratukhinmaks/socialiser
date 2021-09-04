@@ -1,0 +1,55 @@
+@import './colors';
+@import './form-elements';
+
+.wm-slide-toggle {
+  &.mat-slide-toggle {
+    &.mat-checked {
+      .mat-slide-toggle-thumb {
+        background-color: box-color(white);
+        left: -3px;
+      }
+
+      .mat-slide-toggle-bar {
+        background-color: box-color(primary);
+      }
+
+      &:hover {
+        .mat-slide-toggle-bar {
+          background: box-color(primary);
+          filter: saturate(120%);
+        }
+      }
+    }
+
+    .mat-ripple {
+      display: none;
+    }
+
+    .mat-slide-toggle-thumb-container,
+    .mat-slide-toggle-thumb {
+      width: 8px;
+      height: 8px;
+      position: relative;
+      top: 1px;
+      box-shadow: initial;
+    }
+
+    .mat-slide-toggle-thumb {
+      background-color: box-color(white);
+      left: 3px;
+    }
+
+    .mat-slide-toggle-bar {
+      width: 24px;
+      height: 12px;
+      background-color: box-color(grey-lighter);
+
+    }
+
+    &:hover {
+      .mat-slide-toggle-bar {
+        background-color: box-color(grey);
+      }
+    }
+  }
+}

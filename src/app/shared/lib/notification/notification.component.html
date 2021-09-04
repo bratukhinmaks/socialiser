@@ -1,0 +1,42 @@
+<div
+  [ngClass]="['wm-notification', 'wm-notification--' + type]"
+  [ngSwitch]="type"
+  @visibility
+>
+  <i-feather
+    *ngSwitchCase="Notification.SUCCESS"
+    name="check-circle"
+    class="wm-notification__icon"
+  ></i-feather>
+  <i-feather
+    *ngSwitchCase="Notification.WARNING"
+    name="alert-circle"
+    class="wm-notification__icon"
+  ></i-feather>
+  <i-feather
+    *ngSwitchCase="Notification.ERROR"
+    name="alert-triangle"
+    class="wm-notification__icon"
+  ></i-feather>
+
+  <p class="wm-overline wm-notification__text">
+    <ng-content></ng-content>
+  </p>
+
+  <div class="wm-notification__buttons">
+    <button
+      *ngIf="showAdditional"
+      class="wm-notification__buttons__additional"
+      (click)="onAdditionalClick()">
+      {{ additionalButtonText }}
+      <i-feather [name]="additionalButtonIconName" class="wm-notification__buttons__additional__icon"></i-feather>
+    </button>
+
+    <button
+      *ngIf="showClose"
+      class="wm-notification__buttons__close" (click)="onCloseClick()">
+      {{ closeButtonText }}
+      <i-feather [name]="closeButtonIconName" class="wm-notification__buttons__close__icon"></i-feather>
+    </button>
+  </div>
+</div>

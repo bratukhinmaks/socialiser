@@ -1,0 +1,17 @@
+@import '../scss/colors';
+
+.wm-sort-button {
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    cursor: pointer;
+    width: 20px;
+    height: 12px;
+    color: box-color(grey);
+
+    &--selected {
+      color: box-color(grey-darkest);
+    }
+  }
+}

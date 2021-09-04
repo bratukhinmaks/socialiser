@@ -1,0 +1,9 @@
+<div class="wm-sort-button">
+  <i-feather
+    *ngFor="let button of buttons"
+    (click)="onSortChange(button?.selectedState)"
+    class="wm-sort-button__icon"
+    [ngClass]="{ 'wm-sort-button__icon--selected': button?.selectedState === sort }"
+    [name]="button?.icon"
+  ></i-feather>
+</div>

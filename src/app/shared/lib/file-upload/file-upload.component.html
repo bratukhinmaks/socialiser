@@ -1,0 +1,61 @@
+<div class="wm-file-upload">
+  <div
+    *ngIf="currentState === fileUploadState.INITIAL"
+    class="wm-file-upload__initial-state base-container"
+    [class.wm-file-upload__initial-state--hover]="dragHover"
+    (dragover)="dragOver($event)"
+    (dragleave)="dragLeave($event)"
+    (drop)="fileSelectHandler($event)"
+    (click)="fileInput.click()"
+  >
+    <p class="wm-caption wm-file-upload__initial-state__text--primary">{{ initialPrimaryText }}</p>
+    &nbsp;
+    <p class="wm-caption wm-file-upload__initial-state__text">{{ initialSecondaryText }}</p>
+  </div>
+
+  <div
+    *ngIf="currentState === fileUploadState.UPLOADING"
+    class="wm-file-upload__loading-state base-container"
+  >
+    <p class="wm-caption wm-file-upload__loading-state__name">
+      {{ processingText || uploadedFileName }}
+    </p>
+    <div class="wm-file-upload__loading-state__progress">
+      <mat-progress-bar
+        class="wm-file-upload__upload-progress wm-file-upload__loading-state__loading-bar"
+        mode="indeterminate">
+      </mat-progress-bar>
+    </div>
+  </div>
+
+  <div
+    *ngIf="currentState === fileUploadState.COMPLETED"
+    class="wm-file-upload__uploaded-state base-container"
+  >
+    <p class="wm-caption wm-file-upload__uploaded-state__completed">
+      {{ completedText || uploadedFileName}}
+    </p>
+    <div class="wm-file-upload__uploaded-state__action-buttons">
+      <button
+        class="wm-button-function wm-file-upload__uploaded-state__action-buttons__button"
+        *ngIf="showPreview"
+        (click)="onPreviewFiles()"
+      >
+        <i-feather name="eye"></i-feather>
+      </button>
+      <button
+        class="wm-button-function wm-file-upload__uploaded-state__action-buttons__button"
+        (click)="onRemoveFile()">
+        <i-feather name="delete"></i-feather>
+      </button>
+    </div>
+  </div>
+
+  <input
+    #fileInput
+    class="wm-file-upload__input"
+    type="file"
+    [attr.accept]="acceptedFileTypes"
+    (change)="fileSelectHandler($event)"
+  >
+</div>

@@ -1,0 +1,31 @@
+@import '../scss/fonts';
+@import '../scss/colors';
+@import '../scss/form-elements';
+
+.wm-search {
+  position: relative;
+  width: 100%;
+
+  &__input {
+    @include input-base;
+
+    height: 32px;
+    padding: 10px 30px 10px 16px;
+    font-size: 11px;
+
+    &[disabled] {
+      @include input-disabled-base;
+    }
+  }
+
+  &__icon {
+    @include icon-base;
+
+    top: 8px;
+    right: 8px;
+  }
+
+  &__clear {
+    cursor: pointer;
+  }
+}

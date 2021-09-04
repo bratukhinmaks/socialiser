@@ -1,0 +1,70 @@
+@import '../scss/colors';
+@import '../scss/data-buttons';
+
+.wm-data-button {
+  $self: &;
+
+  position: relative;
+  display: table;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  cursor: pointer;
+  background: box-color(grey-lightest);
+  border: 1px solid box-color(grey-lighter);
+  box-sizing: border-box;
+  border-radius: 24px;
+  user-select: none;
+
+  &:hover {
+    background: box-color(white);
+    border: 1px solid box-color(grey-lighter);
+    box-shadow: 0 3px 4px rgba(16, 45, 72, 0.06);
+
+    #{$self}__remove {
+      display: block;
+    }
+
+    &#{$self}--disabled {
+      box-shadow: none;
+      background: box-color(grey-lightest);
+    }
+  }
+
+  &__remove {
+    display: none;
+    position: absolute;
+    color: box-color(grey-darker);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    top: -5px;
+    right: -5px;
+
+    i-feather {
+      width: 16px;
+      height: 16px;
+      stroke: box-color(grey-darker);
+      fill: box-color(white);
+    }
+  }
+
+  &--disabled {
+    cursor: default;
+    background-color: box-color(grey-lightest);
+    color: box-color(grey-darker);
+    box-shadow: none;
+  }
+
+  span:not(#{$self}__remove) {
+    vertical-align: middle;
+    display: table-cell;
+    text-align: left;
+    padding: 4px 10px;
+    border-radius: 24px;
+  }
+
+  &__data-source,
+  &__data-answer {
+    background: rgba(229, 230, 235, 0.5);
+  }
+}

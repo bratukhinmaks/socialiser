@@ -1,0 +1,88 @@
+@import '../scss/colors';
+
+@mixin input-base {
+  border: 1px solid box-color(grey-lighter);
+  border-radius: 6px;
+  background: box-color(white);
+  width: 100%;
+  height: 40px;
+  color: box-color(grey-darkest);
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 300;
+  box-sizing: border-box;
+  outline: none;
+  letter-spacing: 0.2px;
+
+  &:focus {
+    border-color: box-color(grey);
+  }
+
+  &::placeholder {
+    color: box-color(grey);
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &--error {
+    border-color: box-color(negative);
+  }
+}
+
+@mixin label-base {
+  color: box-color(grey-darker);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  margin-bottom: 7px;
+  display: block;
+}
+
+@mixin error-base {
+  margin: 0;
+  font-size: 10px;
+  line-height: 14px;
+  color: box-color(negative);
+  letter-spacing: 0.2px;
+}
+
+@mixin length-info-base {
+  position: absolute;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: box-color(grey);
+  background: box-color(white);
+}
+
+@mixin icon-base {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  color: box-color(grey-darker);
+}
+
+@mixin dropdown-base {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  z-index: 1;
+  background-color: box-color(white);
+  box-shadow: 0px 8px 12px rgba(29, 29, 50, 0.1);
+  border-radius: 6px;
+}
+
+@mixin mat-ripple($color: box-color(grey-darkest)) {
+  .mat-ripple-element {
+    background-color: #{$color};
+  }
+}
+
+@mixin input-disabled-base {
+  color: box-color(grey-lighter);
+}

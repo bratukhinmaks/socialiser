@@ -1,0 +1,86 @@
+@import '../scss/colors.scss';
+
+.wm-menu-button {
+  display: flex;
+  align-items: center;
+  padding: 2px 2px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid box-color(grey);
+  border-radius: 4px;
+  background: box-color(white);
+
+  &__text {
+    color: box-color(grey-darker);
+    margin-right: 5px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  &.wm-title {
+    width: auto;
+    height: auto;
+    padding: 2px 10px;
+    border-radius: 6px;
+
+    .mat-icon-button.wm-menu-button__trigger {
+      height: auto;
+      width: auto;
+      margin-right: 0;
+    }
+
+    &:hover .wm-menu-button__text {
+      color: box-color(grey-darkest);
+    }
+
+    &.wm-expanded {
+      background: box-color(secondary-on-contrast-background);
+      border-color: box-color(secondary-on-contrast-background);
+
+      .wm-menu-button__text,
+      i-feather {
+        color: box-color(white);
+      }
+    }
+  }
+
+  &.wm-expanded {
+    background: box-color(grey-lighter);
+    border-color: box-color(grey-darker);
+
+    i-feather {
+      color: box-color(grey-darkest);
+    }
+  }
+
+  &:hover,
+  &.wm-loading {
+    border-color: box-color(grey-darker);
+  }
+
+  &:hover i-feather {
+    color: box-color(grey-darkest);
+  }
+
+  button:not(:first-of-type) {
+    margin-left: 4px;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin-right: 12px;
+    vertical-align: middle;
+
+    i-feather {
+      height: 16px;
+      width: 16px;
+      line-height: 16px;
+      color: box-color(grey-darker);
+    }
+  }
+}

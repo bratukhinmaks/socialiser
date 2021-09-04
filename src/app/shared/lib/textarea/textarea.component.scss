@@ -1,0 +1,47 @@
+@import '../scss/fonts';
+@import '../scss/colors';
+@import '../scss/form-elements';
+
+.wm-textarea {
+  position: relative;
+  width: 100%;
+
+  &__label {
+    @include label-base;
+  }
+
+  &__container {
+    position: relative;
+    min-height: 115px;
+  }
+
+  &__textarea {
+    @include input-base;
+    padding-bottom: 20px;
+    position: absolute;
+    height: 100%;
+    resize: none;
+    font-family: $defaultFontFamily;
+
+    &--with-counter {
+      padding-bottom: 22px;
+    }
+
+    &[disabled] {
+      @include input-disabled-base;
+    }
+  }
+
+  &__length-info {
+    @include length-info-base;
+    right: 6px;
+    bottom: 1px;
+    padding: 4px;
+    left: 4px;
+    text-align: end;
+  }
+
+  &__error {
+    @include error-base;
+  }
+}

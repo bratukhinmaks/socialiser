@@ -1,0 +1,27 @@
+<div
+  class="wm-menu-button"
+  [class.wm-expanded]="trigger.menuOpen"
+  [class.wm-loading]="loading"
+  [class.wm-title]="title"
+  (click)="$event.stopPropagation()"
+>
+  <button
+    mat-icon-button
+    class="wm-menu-button__trigger"
+    [matMenuTriggerFor]="menu"
+    [disableRipple]="true"
+    [disabled]="loading"
+  >
+    <span *ngIf="title" class="wm-menu-button__text">{{ title }}</span>
+    <wm-loader
+      *ngIf="loading; else icon"
+      mode="indeterminate"
+      diameter="15"
+      strokeWidth="1"
+    ></wm-loader>
+    <ng-template #icon><i-feather [name]="featherIcon"></i-feather></ng-template>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before" (closed)="triggerChangeDetection()">
+    <ng-content></ng-content>
+  </mat-menu>
+</div>

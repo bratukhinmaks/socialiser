@@ -1,0 +1,31 @@
+<div
+  #dashedButtonContainer
+  class="wm-empty-state-rectangle-button"
+  [class.wm-empty-state-rectangle-button--disabled]="disabled"
+>
+  <div
+    class="wm-empty-state-rectangle-button__content"
+    [class.wm-empty-state-rectangle-button__content--disabled]="disabled"
+  >
+    <ng-content></ng-content>
+  </div>
+  <svg
+    class="wm-empty-state-rectangle-button__border"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    [style.width]="svgWidth"
+    [style.height]="svgHeight"
+  >
+    <rect
+      x="2"
+      y="1"
+      [attr.width]="rectWidth"
+      [attr.height]="rectHeight"
+      stroke-width="2px"
+      rx="6px"
+      ry="6px"
+      stroke-linejoin="round"
+      fill="none"
+    />
+  </svg>
+</div>

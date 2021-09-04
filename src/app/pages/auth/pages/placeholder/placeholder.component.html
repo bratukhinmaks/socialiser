@@ -1,5 +1,6 @@
 <div class="container">
  <div class="close-button--{{type === 'login' ? 'left' : 'right'}}">
+  {{type | json}}
   <mat-icon [ngStyle]="{'color':'white','width':'48px','height':'48px','font-size':'48px'} " inline="true" routerLink="/" >close</mat-icon>
  </div>
  <ng-container *ngIf="type === 'login' else register">

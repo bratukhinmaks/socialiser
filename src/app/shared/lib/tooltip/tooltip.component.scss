@@ -1,0 +1,125 @@
+@import '../scss/colors';
+@import '../scss/typography';
+@import '../scss/tooltip';
+
+.wm-tooltip {
+  color: box-color(white);
+  background: box-color(grey-darkest);
+  position: relative;
+  border-radius: 6px;
+  text-align: center;
+  filter: drop-shadow(0px 10px 10px rgba(29, 29, 50, 0.1));
+  padding: 8px 16px;
+  max-width: none;
+
+  &-container {
+    padding: 15px;
+    display: inline-block;
+  }
+
+  &::after {
+    content: '';
+    border: 8px solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &--arrow {
+    &-top {
+      &:after {
+        bottom: 100%;
+        left: 50%;
+        border-bottom-color: box-color(grey-darkest);
+        margin-left: -8px;
+      }
+    }
+
+    &-right {
+      &::after {
+        left: 100%;
+        top: 50%;
+        border-left-color: box-color(grey-darkest);
+        margin-top: -8px;
+      }
+    }
+
+    &-bottom {
+      &:after {
+        top: 100%;
+        left: 50%;
+        border-top-color: box-color(grey-darkest);
+        margin-left: -8px;
+      }
+    }
+
+    &-left {
+      &:after {
+        right: 100%;
+        top: 50%;
+        border-right-color: box-color(grey-darkest);
+        margin-top: -8px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 4px 0;
+    @extend .wm-h6;
+    word-break: break-all;
+  }
+
+  &__text {
+    @extend .wm-text-small;
+    overflow-wrap: break-word;
+  }
+
+  &--titled {
+    padding: 16px;
+    text-align: left;
+    max-width: 226px;
+  }
+
+  &--description {
+    max-width: 168px;
+    padding: 16px 10px;
+  }
+
+  &--description-long {
+    max-width: 380px;
+    padding: 10px 16px;
+  }
+
+  &--standard {
+    padding: 8px 16px;
+    max-width: none;
+  }
+
+  &--data-tooltip {
+    max-width: 155px;
+    padding: 16px;
+    text-align: left;
+  }
+
+  &--opportunities-calibration {
+    max-width: 186px;
+    padding: 16px 14px;
+  }
+
+  &--validation {
+    max-width: 238px;
+    padding: 24px;
+  }
+
+  &--audience-builder {
+    max-width: 322px;
+    padding: 16px;
+  }
+
+  &--user-popover {
+    width: 261px;
+    max-height: 247px;
+    padding: 14px 6px 14px 16px;
+  }
+}

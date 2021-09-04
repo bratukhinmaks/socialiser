@@ -1,0 +1,18 @@
+<div class="wm-search">
+  <input
+    #input
+    [attr.placeholder]="placeholder"
+    [ngModel]="value"
+    (ngModelChange)="onValueChange($event)"
+    (blur)="onTouch()"
+    class="wm-search__input"
+    [disabled]="disabled"
+  />
+  <i-feather *ngIf="!value" name="search" class="wm-search__icon"></i-feather>
+  <i-feather
+    *ngIf="value"
+    (click)="clear()"
+    name="x-circle"
+    class="wm-search__icon wm-search__clear"
+  ></i-feather>
+</div>

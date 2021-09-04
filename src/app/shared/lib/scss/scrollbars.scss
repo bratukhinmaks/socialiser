@@ -1,0 +1,34 @@
+@import './colors';
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: box-color(white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: box-color(grey-lighter);
+  border-radius: 6px;
+
+  &:hover {
+    background: box-color(grey);
+  }
+}
+
+.wm-scrollbar--dark {
+  &::-webkit-scrollbar-track {
+    background: box-color(grey-darkest);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(box-color(white-rgb), 0.3);
+    border-radius: 6px;
+
+    &:hover {
+      background: rgba(box-color(white-rgb), 0.6);
+    }
+  }
+}

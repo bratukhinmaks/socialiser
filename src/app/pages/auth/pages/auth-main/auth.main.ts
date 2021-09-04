@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, NavigationEnd, Router, UrlSegment} from '@angular/router';
+import {ActivatedRoute, NavigationEnd, Router, RouterOutlet, UrlSegment} from '@angular/router';
 import {animate, group, keyframes, state, style, transition, trigger} from '@angular/animations';
-import {filter, switchMap, tap} from 'rxjs/operators';
+import {filter, map, pluck, switchMap, tap} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 export interface DataResponce {
     type: string;
@@ -12,15 +13,15 @@ export interface DataResponce {
     styleUrls: ['./auth.main.scss'],
     animations: [
         trigger('slideInOut', [
-            state('left', style({
+            state('login', style({
                 left: '0',
                 width: '35%',
             })),
-            state('right', style({
+            state('registration', style({
                 right: '0',
                 width: '35%',
             })),
-            transition('left => right', [group([
+            transition('login => registration', [group([
                     animate('2200ms ease-in-out', keyframes([
                         style({left: '10%', width: '25%', offset: 0.2 }),
                         style({left: '20%', width: '35%', offset: 0.4 }),
@@ -32,7 +33,7 @@ export interface DataResponce {
                     ),
                 ]
             )]),
-            transition('right => left', [group([
+            transition('registration => login', [group([
                     animate('2200ms ease-in-out', keyframes([
                             style({right: '10%', width: '25%', offset: 0.2 }),
                             style({right: '20%', width: '35%', offset: 0.4 }),
@@ -44,18 +45,6 @@ export interface DataResponce {
                     ),
                 ]
             )]),
-            // transition('out => in', [group([
-            //         animate('1ms ease-in-out', style({
-            //             'visibility': 'visible'
-            //         })),
-            //         animate('600ms ease-in-out', style({
-            //             'max-height': '500px'
-            //         })),
-            //         animate('800ms ease-in-out', style({
-            //             'opacity': '1'
-            //         }))
-            //     ]
-            // )])
         ]),
         trigger('appearFromAbove', [
             state('above', style({
@@ -74,45 +63,34 @@ export interface DataResponce {
                         style({opacity: '1', offset: 1 }),
                     ])
                     ),
-                    // animate('700ms ease-in-out', style({
-                    //     opacity: 1,
-                    // }))
                 ]
             )])
-            // transition('out => in', [group([
-            //         animate('1ms ease-in-out', style({
-            //             'visibility': 'visible'
-            //         })),
-            //         animate('600ms ease-in-out', style({
-            //             'max-height': '500px'
-            //         })),
-            //         animate('800ms ease-in-out', style({
-            //             'opacity': '1'
-            //         }))
-            //     ]
-            // )])
         ]),
     ]
 })
 
 export class AuthMainComponent implements OnInit {
-    public animation = 'right';
     public animationAppear = 'to';
-    public type = 'login';
+    public type$: Observable<any>;
 
-    constructor(private route: ActivatedRoute, private router: Router) {}
+    constructor(private route: ActivatedRoute, private router: Router) {
+        this.type$ = this.route.firstChild.data;
+    }
+
+    prepareRoute(outlet: RouterOutlet) {
+        console.log(outlet.activatedRoute.firstChild.data)
+        return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+    }
 
     ngOnInit(): void {
-         this.router.events.pipe(
+        this.initType();
+    }
+
+    initType() {
+        this.router.events.pipe(
             filter(event => event instanceof NavigationEnd),
-            switchMap(() => this.route.firstChild.data),
-            tap(() => {
-                this.route.firstChild.data.subscribe((data: DataResponce) => {
-                    this.animation = data.type === 'login' ? 'right' : 'left';
-                    this.animationAppear = data.type === 'login' ? 'to' : 'above';
-                });
-            })
-        ).subscribe((data: DataResponce) => this.type = data.type);
+            map(() => this.type$ = this.route.firstChild.data)
+        ).subscribe();
     }
 
 

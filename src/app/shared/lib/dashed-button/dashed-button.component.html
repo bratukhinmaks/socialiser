@@ -1,0 +1,42 @@
+<div
+  #dashedButtonContainer
+  class="wm-dashed-button"
+  [class.wm-animate]="isAnimated"
+  [class.wm-without-active]="isWithoutActiveState"
+>
+  <svg
+    class="wm-dashed-button__border"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    [style.width.px]="dashedButtonContainer?.offsetWidth"
+    [style.height.px]="dashedButtonContainer?.offsetHeight"
+  >
+    <rect
+      x="5"
+      y="5"
+      [attr.width]="dashedButtonContainer?.offsetWidth - RECT_SIZE_DIFFERENCE"
+      [attr.height]="dashedButtonContainer?.offsetHeight - RECT_SIZE_DIFFERENCE"
+      stroke-width="2px"
+      rx="6px"
+      ry="6px"
+      stroke-linejoin="round"
+      fill="none"
+    />
+  </svg>
+  <div class="wm-dashed-button__content">
+    <p class="wm-subtitle-small">{{ text }}</p>
+    <img
+      class="wm-dashed-button__content__image"
+      *ngIf="svgIconSource"
+      [src]="svgIconSource"
+      alt=""
+    />
+    <img
+      class="wm-dashed-button__content__image--activate"
+      *ngIf="svgActivateIconSource"
+      [src]="svgActivateIconSource"
+      alt=""
+    />
+    <i-feather *ngIf="featherIconName" [name]="featherIconName"></i-feather>
+  </div>
+</div>

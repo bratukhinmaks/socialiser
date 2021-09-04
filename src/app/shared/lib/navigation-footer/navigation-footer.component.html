@@ -1,0 +1,35 @@
+<div class="action-buttons__container" [style.position]="containerPosition">
+  <p *ngIf="errorText" class="action-buttons__error">{{ errorText }}</p>
+  <button
+    *ngIf="isBack"
+    (click)="onGoBack()"
+    [disabled]="backDisabled"
+    color="primary"
+    class="wm-button-primary wm-cancel action-buttons__button action-buttons__button--cancel"
+    [ngClass]="!isContinue && 'action-buttons__button--continue-not-visible'"
+    data-test="FOOTER.BUTTON.BACK"
+    mat-button
+  >
+    {{ backText }}
+  </button>
+
+  <div
+    [wmTooltip]="continueDisabledTooltip"
+    [showToolTip]="continueDisabled && (continueDisabledTooltip || continueShowTooltip)"
+    position="top"
+    maxWidth="250px"
+    [contentTemplate]="continueShowTooltip && continueTooltipTemplate"
+  >
+    <button
+      *ngIf="isContinue"
+      (click)="onContinue()"
+      [disabled]="continueDisabled"
+      color="primary"
+      class="wm-button-primary action-buttons__button"
+      data-test="FOOTER.BUTTON.CONTINUE"
+      mat-button
+    >
+      {{ continueText }}
+    </button>
+  </div>
+</div>

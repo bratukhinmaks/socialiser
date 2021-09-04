@@ -1,0 +1,38 @@
+.wms-theme {
+  --box-color-primary: #007cff;
+  --box-color-primary-variant: #66b0ff;
+
+  --box-color-primary-on-contrast-background: #07b5b2;
+  --box-color-primary-variant-on-contrast-background: #83dad8;
+
+  --box-color-secondary-lighter: #475d80;
+  --box-color-secondary: #0a2756;
+  --box-color-secondary-darker: #1e2838;
+
+  --box-color-secondary-lighter-on-contrast-background: #66b0ff;
+  --box-color-secondary-on-contrast-background: #0a2756;
+  --box-color-secondary-darker-on-contrast-background: #1e2838;
+
+  --box-color-background: #ffffff;
+  --box-color-background-secondary: #f2f2f2;
+  --box-color-background-contrast: #0a2756;
+  --box-color-background-active: #0a2756;
+
+  --box-color-white-rgb: 255, 255, 255;
+  --box-color-white: #ffffff;
+  --box-color-grey-lightest: #f2f2f2;
+  --box-color-grey-lighter: #d9d9d9;
+  --box-color-grey: #a7a7a7;
+  --box-color-grey-darker: #595959;
+  --box-color-grey-darkest: #242424;
+  --box-color-black: #000000;
+  --box-color-black-rgb: 0, 0, 0;
+  --box-color-black-overlay: rgba(0, 0, 0, 0.3);
+
+  --box-color-negative: #e73700;
+  --box-color-negative-light: #fcebe6;
+  --box-color-positive: #09a775;
+  --box-color-positive-light: #e6f6f1;
+  --box-color-neutral: #ffa900;
+  --box-color-neutral-light: #fff6e6;
+}

@@ -1,0 +1,29 @@
+@import '../scss/colors';
+
+.wm-empty-state-circle-button {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed box-color(grey);
+  border-radius: 50%;
+  background-color: box-color(white);
+  color: box-color(grey);
+  cursor: pointer;
+
+  &:hover {
+    background-color: box-color(grey-lightest);
+    color: box-color(grey-darkest);
+    border-color: box-color(grey-darkest);
+  }
+
+  &:active {
+    border-style: solid;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+  }
+}

@@ -7,6 +7,7 @@ import {RegistrationModule} from '@app/pages/auth/pages/registration/registratio
 import {AuthRoutingModule} from '@app/pages/auth/auth-routing.module';
 import {PlaceholderComponent} from '@app/pages/auth/pages/placeholder/placeholder.component';
 import { MatIconModule} from '@angular/material/icon';
+import {TypeResolver} from '@app/pages/auth/pages/services/type.resolver';
 
 @NgModule({
   declarations: [AuthMainComponent, PlaceholderComponent ],
@@ -17,6 +18,9 @@ import { MatIconModule} from '@angular/material/icon';
     RegistrationModule,
     AuthRoutingModule,
     MatIconModule,
+  ],
+  providers: [
+      TypeResolver
   ]
 })
 export class AuthModule { }

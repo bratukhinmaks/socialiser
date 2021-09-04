@@ -1,0 +1,39 @@
+<div class="wm-loader-container">
+  <div class="wm-loader wm-loader__{{ strokeColor }}">
+    <mat-progress-spinner
+      [diameter]="diameter"
+      [value]="value"
+      [mode]="mode"
+      [strokeWidth]="strokeWidth"
+      class="wm-loader__spinner"
+    ></mat-progress-spinner>
+
+    <mat-progress-spinner
+      [diameter]="diameter"
+      [value]="100"
+      mode="determinate"
+      class="wm-loader__spinner-background"
+      [ngClass]="{ 'wm-loader__spinner-background--error': error }"
+      [strokeWidth]="strokeWidth"
+    ></mat-progress-spinner>
+
+    <span class="wm-loader__percent" *ngIf="value && !error">{{ value }}%</span>
+    <svg
+      *ngIf="error"
+      class="wm-loader__error"
+      width="9"
+      height="40"
+      viewBox="0 0 9 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4.03411 24.0171C2.90832 24.0171 1.97015 23.6418 1.21962 22.7974C0.375266 22.0469 0 21.1087 0 19.9829V3.9403C0 2.90832 0.375266 1.97015 1.21962 1.1258C1.97015 0.375266 2.90832 0 4.03411 0C5.15991 0 6.0981 0.375266 6.94245 1.1258C7.69298 1.97015 8.06825 2.90832 8.06825 3.9403V19.9829C8.06825 21.1087 7.69298 22.0469 6.94245 22.7974C6.0981 23.6418 5.15991 24.0171 4.03411 24.0171ZM4.03411 39.9659C3.00213 39.9659 2.06396 39.5906 1.31343 38.7463C0.469081 37.9957 0.0938187 37.0576 0.0938187 36.0256C0.0938187 34.8998 0.469083 33.9616 1.21962 33.1173C1.97015 32.3667 2.90832 31.9915 4.03411 31.9915C5.15991 31.9915 6.0981 32.3667 6.94245 33.1173C7.69298 33.9616 8.06825 34.8998 8.06825 36.0256C8.06825 37.0576 7.69298 37.9957 6.94245 38.7463C6.0981 39.5906 5.15991 39.9659 4.03411 39.9659Z"
+      />
+    </svg>
+  </div>
+
+  <h5 class="wm-h5 wm-loader-title" *ngIf="error">{{ error }}</h5>
+  <h5 class="wm-h5 wm-loader-title" *ngIf="title && !error">{{ title }}</h5>
+  <span class="wm-loader-description" *ngIf="description && !error">{{ description }}</span>
+</div>

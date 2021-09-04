@@ -1,0 +1,61 @@
+<ng-select
+  #select
+  class="wm-select wm-select--multi"
+  [ngModel]="value"
+  (ngModelChange)="onValueChange($event)"
+  [items]="items"
+  [searchable]="false"
+  [clearable]="false"
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [multiple]="true"
+  [closeOnSelect]="false"
+  [selectableGroup]="true"
+  [selectableGroupAsModel]="false"
+  [groupBy]="selectAllLabel ? groupBy : null"
+  [bindValue]="bindValue"
+  [bindLabel]="bindLabel"
+>
+  <ng-template ng-header-tmp>
+    <wm-search
+      [disabled]="disabled"
+      [placeholder]="searchPlaceholder"
+      (valueChange)="select.filter($event)"
+    ></wm-search>
+  </ng-template>
+
+  <ng-container *ngIf="selectAllLabel">
+    <ng-template ng-optgroup-tmp let-item="item" let-item$="item$" let-index="index">
+      <mat-checkbox
+        class="wm-checkbox"
+        id="item-{{ index }}"
+        [ngModel]="item$.selected"
+        [ngModelOptions]="{ standalone: true }"
+        (click)="(false)"
+      >
+        {{ selectAllLabel }}
+      </mat-checkbox>
+    </ng-template>
+  </ng-container>
+
+  <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+    <mat-checkbox
+      class="wm-checkbox"
+      id="item-{{ index }}"
+      [ngModel]="item$.selected"
+      [ngModelOptions]="{ standalone: true }"
+      (click)="(false)"
+    >
+      {{ bindLabel ? item[bindLabel] : item }}
+    </mat-checkbox>
+  </ng-template>
+
+  <ng-template ng-multi-label-tmp let-selectItems="items" let-clear="clear">
+    <wm-multiselect-items
+      [items]="selectItems"
+      [clear]="clear"
+      [text]="items.length === selectItems.length ? selectAllLabel : null"
+      [bindLabel]="bindLabel"
+    ></wm-multiselect-items>
+  </ng-template>
+</ng-select>

@@ -1,0 +1,28 @@
+<div class="wm-multiselect-items" #itemsList>
+  <ng-container *ngIf="!text; else showText">
+    <div class="wm-multiselect-items__item-list">
+      <div class="wm-multiselect-items__item-container" *ngFor="let item of items | slice: 0:maxItems">
+        <div class="wm-multiselect-items__item">
+          <div class="wm-multiselect-items__label">{{ bindLabel ? item[bindLabel] : item }}</div>
+          <i-feather
+            class="wm-multiselect-items__close"
+            name="x"
+            (click)="clear(item)"
+            (mousedown)="$event?.stopPropagation()"
+          ></i-feather>
+        </div>
+      </div>
+    </div>
+
+    <ng-container *ngIf="items.length > maxItems">
+      <span class="wm-text wm-multiselect-items__dots">...</span>
+      <span class="wm-multiselect-items__counter">{{ items.length - maxItems }}</span>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #showText>
+    <span class="wm-text wm-multiselect-items__text">{{ text }}</span>
+  </ng-template>
+
+  <canvas #canvas class="wm-multiselect-items__canvas"></canvas>
+</div>

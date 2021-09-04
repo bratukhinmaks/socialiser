@@ -1,13 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="43020825-5294-4353-a1bf-9bd6288b53e5" name="Default Changelist" comment="" />
+    <list default="true" id="43020825-5294-4353-a1bf-9bd6288b53e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/config/lang.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/auth/pages/services/type.resolver.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/devexpress/mocked-data-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/arrow-button/arrow-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/arrow-button/arrow-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/arrow-button/arrow-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/arrow/arrow.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/arrow/arrow.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/arrow/arrow.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/back-button/back-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/back-button/back-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/back-button/back-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/box-wrapper/box-wrapper.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/box-wrapper/box-wrapper.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/box-wrapper/box-wrapper.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/card/card.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/card/card.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/card/card.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/chip-button/chip-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/chip-button/chip-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/chip-button/chip-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/essence-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/greenhouse-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/groupm-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/mediacom-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/mindshare-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/msix-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/wavemaker-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/wms-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/config/wpp-open-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/confirmation-popup/confirmation-popup.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/confirmation-popup/confirmation-popup.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/confirmation-popup/confirmation-popup.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/confirmation-popup/confirmation-popup.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/confirmation-popup/confirmation-popup.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/dashed-button/dashed-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/dashed-button/dashed-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/dashed-button/dashed-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/data-button/data-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/data-button/data-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/data-button/data-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/datepicker-header/datepicker-header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/datepicker-header/datepicker-header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/datepicker-header/datepicker-header.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/empty-state-circle-button/empty-state-circle-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/empty-state-circle-button/empty-state-circle-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/empty-state-circle-button/empty-state-circle-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/empty-state-rectangle-button/empty-state-rectangle-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/empty-state-rectangle-button/empty-state-rectangle-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/empty-state-rectangle-button/empty-state-rectangle-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/file-upload/file-upload.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/file-upload/file-upload.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/file-upload/file-upload.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/guide/guide-tooltip/guide-tooltip.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/guide/guide-tooltip/guide-tooltip.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/guide/guide-tooltip/guide-tooltip.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/guide/guide.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/icons/icons.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/input-with-dropdown/input-with-dropdown.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/input-with-dropdown/input-with-dropdown.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/input-with-dropdown/input-with-dropdown.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/input/input.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/input/input.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/input/input.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/list-item/list-item.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/list-item/list-item.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/list-item/list-item.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/loader/loader.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/loader/loader.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/loader/loader.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/menu-button/menu-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/menu-button/menu-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/menu-button/menu-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/multiselect-items/multiselect-items.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/multiselect-items/multiselect-items.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/multiselect-items/multiselect-items.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/multiselect/multiselect.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/multiselect/multiselect.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/multiselect/multiselect.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/navigation-footer/navigation-footer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/navigation-footer/navigation-footer.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/navigation-footer/navigation-footer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/notification/notification.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/notification/notification.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/notification/notification.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/number-input/number-input.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/number-input/number-input.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/number-input/number-input.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/checkbox.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/circle-progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/confirmation-popup.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/data-buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/datepicker.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/file-upload.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/form-elements.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/globals.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/loader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/main-navbar-buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/main-navigation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/menu-button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/pointer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/radio-button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/scrollbars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/select.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/slide-toggle.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/tabs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-default.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-essence.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-greenhouse.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-groupm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-mediacom.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-mindshare.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-msix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-wavemaker.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-wms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme-wpp-open.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/scss/typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/search/search.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/search/search.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/search/search.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/segmented-controls/segmented-controls.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/segmented-controls/segmented-controls.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/segmented-controls/segmented-controls.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/sort-button/sort-button.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/sort-button/sort-button.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/sort-button/sort-button.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/sort-button/sort-button.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/textarea/textarea.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/textarea/textarea.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/textarea/textarea.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/tooltip/tooltip.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/tooltip/tooltip.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/tooltip/tooltip.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/tooltip/tooltip.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wm-ng-components.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wm-ng-components.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wm-ng-components.core.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wm-ng-components.models.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wm-ng-components.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wm-ng-components.shared.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wrapper/wrapper.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wrapper/wrapper.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/lib/wrapper/wrapper.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/translation/translation.lazy.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/i18n/de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/i18n/pl.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/i18n/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__ngcc_entry_points__.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/__ngcc_entry_points__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/auth-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/auth-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/auth.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/pages/auth-main/auth.main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/pages/auth-main/auth.main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/pages/auth-main/auth.main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/pages/auth-main/auth.main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/pages/auth-main/auth.main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/pages/auth-main/auth.main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/pages/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/pages/placeholder/placeholder.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/pages/placeholder/placeholder.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/pages/placeholder/placeholder.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/pages/placeholder/placeholder.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/static/pages/welcome/welcome.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/static/pages/welcome/welcome.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/static/pages/welcome/welcome.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/static/pages/welcome/welcome.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/static/pages/welcome/welcome.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/static/pages/welcome/welcome.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/static/static.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/static/static.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/controls/input/input.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/controls/input/input.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/controls/password/password.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/controls/password/password.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1rLPG4BzxCPJVqeaFtSvcLCpU5e" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -16,15 +218,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/shared" />
+    <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/shared" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/shared/material" />
       <recent name="$PROJECT_DIR$/src/app/pages/static/pages/welcome" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/components" />
@@ -73,50 +283,62 @@
       <workItem from="1619193613621" duration="28000" />
       <workItem from="1620752247972" duration="18673000" />
       <workItem from="1623410851381" duration="596000" />
+      <workItem from="1623627435206" duration="856000" />
+      <workItem from="1625727533042" duration="10000" />
+      <workItem from="1628249281496" duration="13450000" />
+      <workItem from="1629988539290" duration="225000" />
+      <workItem from="1630747122966" duration="12252000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="664" y="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618760739243">
+    <state x="693" y="420" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630772758222">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="664" y="406" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1618760739243" />
-    <state x="773" y="320" key="#com.intellij.ide.util.MemberChooser" timestamp="1618864741277">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state x="773" y="320" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1618864741276" />
-    <state x="698" y="340" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621263706446">
+    <state x="693" y="420" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1630772758222" />
+    <state x="100" y="128" width="1720" height="972" key="DiffContextDialog" timestamp="1630767704220">
       <screen x="0" y="25" width="1920" height="1077" />
     </state>
-    <state x="698" y="351" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1618761896774" />
-    <state x="698" y="340" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1920.1077@0.25.1920.1077" timestamp="1621263706445" />
-    <state width="1899" height="344" key="GridCell.Tab.0.bottom" timestamp="1622888617909">
+    <state x="100" y="128" width="1720" height="972" key="DiffContextDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1630767595473" />
+    <state x="100" y="128" width="1720" height="972" key="DiffContextDialog/0.25.1920.1077@0.25.1920.1077" timestamp="1630767704220" />
+    <state width="1899" height="334" key="GridCell.Tab.0.bottom" timestamp="1630774337283">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1622888617909" />
-    <state width="1426" height="344" key="GridCell.Tab.0.bottom/0.25.1920.1077@0.25.1920.1077" timestamp="1621263938353" />
-    <state width="1899" height="344" key="GridCell.Tab.0.center" timestamp="1622888617905">
+    <state width="1899" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1630774337283" />
+    <state width="1899" height="334" key="GridCell.Tab.0.center" timestamp="1630774337281">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="344" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1622888617905" />
-    <state width="1426" height="344" key="GridCell.Tab.0.center/0.25.1920.1077@0.25.1920.1077" timestamp="1621263938352" />
-    <state width="1899" height="344" key="GridCell.Tab.0.left" timestamp="1622888617904">
+    <state width="1899" height="334" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1630774337281" />
+    <state width="1899" height="334" key="GridCell.Tab.0.left" timestamp="1630774337269">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="344" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1622888617904" />
-    <state width="1426" height="344" key="GridCell.Tab.0.left/0.25.1920.1077@0.25.1920.1077" timestamp="1621263938348" />
-    <state width="1899" height="344" key="GridCell.Tab.0.right" timestamp="1622888617906">
+    <state width="1899" height="334" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1630774337269" />
+    <state width="1899" height="334" key="GridCell.Tab.0.right" timestamp="1630774337282">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="344" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1622888617906" />
-    <state width="1426" height="344" key="GridCell.Tab.0.right/0.25.1920.1077@0.25.1920.1077" timestamp="1621263938353" />
-    <state x="661" y="355" width="766" height="490" key="find.popup" timestamp="1623053358665">
+    <state width="1899" height="334" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1630774337282" />
+    <state x="661" y="355" width="766" height="490" key="find.popup" timestamp="1628929018677">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="661" y="355" width="766" height="490" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1623053358665" />
-    <state x="661" y="344" width="766" height="522" key="find.popup/0.25.1920.1077@0.25.1920.1077" timestamp="1621264501464" />
+    <state x="661" y="355" width="766" height="490" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1628929018677" />
+    <state x="832" y="494" width="350" height="300" key="org.angular.cli.generate" timestamp="1628449802847">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="832" y="494" width="350" height="300" key="org.angular.cli.generate/0.0.1920.1200@0.0.1920.1200" timestamp="1628449802847" />
   </component>
 </project>

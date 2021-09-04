@@ -1,31 +1,34 @@
-<div class="app-page">
-
-    <div class="app-page__header">
-        <h1>Log in</h1>
+<section class="bg-light form_2">
+    <div class="container px-xl-0">
+        <div class="row justify-content-center text-center text-md-left">
+            <div class="col-lg-5 col-md-6 col-sm-10">
+                <form [formGroup]="form" novalidate autocomplete="off" (submit)="onSubmit()" (keyup.enter)="onSubmit()" class="pt-105 pb-100">
+                    <h2 class="mb-45 small" data-aos="fade-down" data-aos-delay="0">
+                        Log In
+                    </h2>
+                    <div data-aos="fade-down" data-aos-delay="0">
+                        <app-form-field label="Email" [required]="true" [control]="form.controls.email" [isInline]="false"
+                                        [patternError]="regexErrors.email">
+                            <app-input formControlName="email"></app-input>
+                        </app-form-field>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="0">
+                        <app-form-field label="Password" [required]="true" [control]="form.controls.password" [isInline]="false"
+                                        [patternError]="regexErrors.password">
+                            <app-password formControlName="password"></app-password>
+                        </app-form-field>
+                    </div>
+                    <div class="mt-25 d-flex flex-wrap align-items-center buttons" data-aos="fade-down" data-aos-delay="0">
+                        <div class="app-page__footer">
+                            <app-button type="submit">Log in</app-button>
+                        </div>
+                        <div class="color-heading text-adaptive">
+                            By signing up you agree to
+                            <br>Our Terms and Privacy Policy
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <form [formGroup]="form" novalidate autocomplete="off" (submit)="onSubmit()" (keyup.enter)="onSubmit()">
-
-        <div class="app-page__content">
-
-            <app-form-field label="Email" [required]="true" [control]="form.controls.email" [isInline]="false"
-                [patternError]="regexErrors.email">
-                <app-input formControlName="email"></app-input>
-            </app-form-field>
-
-            <app-form-field label="Password" [required]="true" [control]="form.controls.password" [isInline]="false"
-                [patternError]="regexErrors.password">
-                <app-password formControlName="password"></app-password>
-            </app-form-field>
-
-        </div>
-
-        <div class="app-page__footer">
-            <app-button type="submit">Log in</app-button>
-        </div>
-
-    </form>
-
-    <app-spinner *ngIf="loading$ | async"></app-spinner>
-
-</div>
+</section>

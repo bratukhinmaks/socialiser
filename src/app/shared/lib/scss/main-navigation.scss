@@ -1,0 +1,88 @@
+@import '../scss/colors';
+
+.wm-main-navigation.mat-tab-nav-bar {
+  border-bottom-width: 0;
+  background: box-color(grey-lightest);
+
+  .mat-tab-link {
+    border-right: 2px solid box-color(white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    padding: 16px 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 52px;
+    opacity: 1;
+    color: box-color(grey-darker);
+    user-select: none;
+
+    &:first-child {
+      border-left: 2px solid box-color(white);
+    }
+
+    &:hover:not(.mat-tab-label-active) {
+      color: box-color(grey-darkest);
+    }
+
+    i-feather {
+      width: 12px;
+      height: 12px;
+      stroke: box-color(positive);
+      margin-left: 4px;
+      line-height: 4px;
+    }
+  }
+
+  .mat-tab-label-active {
+    background: box-color(white);
+    color: box-color(primary);
+    font-weight: bold;
+  }
+
+  .mat-ink-bar {
+    display: none;
+  }
+
+  .mat-tab-header-pagination-disabled {
+    display: none;
+  }
+
+  .mat-tab-label.mat-tab-disabled,
+  .mat-tab-link.mat-tab-disabled {
+    color: box-color(grey-darker);
+    opacity: 0.6;
+  }
+
+  .mat-tab-label-active.mat-tab-label.mat-tab-disabled,
+  .mat-tab-label-active.mat-tab-link.mat-tab-disabled {
+    color: box-color(primary);
+  }
+
+  .mat-tab-header-pagination {
+    box-shadow: none;
+    min-width: 52px;
+    background: box-color(grey-lightest);
+  }
+
+  .mat-tab-header-pagination-before.mat-elevation-z4 {
+    box-shadow: 20px 0 15px -5px rgba(255, 255, 255, 0.4), 5px 0 15px 0 rgba(243, 244, 247, 1);
+    background: linear-gradient(270deg, #ffffff50, box-color(grey-lightest) 10%, box-color(grey-lightest) 100%);
+  }
+
+  .mat-tab-header-pagination-after.mat-elevation-z4 {
+    box-shadow: -20px 0 15px -5px rgba(255, 255, 255, 0.4), -5px 0 15px 0 rgba(243, 244, 247, 1);
+    background: linear-gradient(90deg, #ffffff50, box-color(grey-lightest) 10%, box-color(grey-lightest) 100%);
+  }
+
+  .mat-tab-header-pagination .mat-tab-header-pagination-chevron {
+    border-color: box-color(primary);
+  }
+}
+
+.wm-main-navigation__close-button {
+  margin-left: auto;
+  padding: 12px;
+  box-sizing: content-box;
+}

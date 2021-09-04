@@ -1,0 +1,82 @@
+@import '../scss/colors.scss';
+
+.wm-dashed-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: box-color(white);
+  cursor: pointer;
+  padding: 14px 22px;
+
+  &__border {
+    position: absolute;
+
+    rect {
+      fill: none;
+      stroke: box-color(grey);
+      stroke-width: 1px;
+      stroke-dasharray: 3px 3px;
+      shape-rendering: geometricPrecision;
+      stroke-dashoffset: 12px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    p {
+      margin: 0;
+      z-index: 10;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 500;
+      letter-spacing: 0.25px;
+    }
+
+    i-feather,
+    img {
+      width: 16px;
+      height: 16px;
+      margin-left: 9px;
+      z-index: 10;
+    }
+
+    &__image {
+      &--activate {
+        display: none;
+      }
+    }
+  }
+
+  &.wm-animate {
+    &:hover:not(:active) {
+      rect {
+        animation: stroke-animation 0.4s linear infinite;
+      }
+    }
+  }
+
+  &:active:not(.wm-without-active) {
+    color: box-color(grey-darkest);
+
+    svg {
+      rect {
+        fill: box-color(white);
+      }
+    }
+
+    .wm-dashed-button__content__image {
+      display: none;
+      &--activate {
+        display: block;
+      }
+    }
+  }
+
+  @keyframes stroke-animation {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

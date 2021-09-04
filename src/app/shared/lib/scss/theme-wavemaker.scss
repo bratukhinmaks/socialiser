@@ -1,0 +1,38 @@
+.wavemaker-theme {
+  --box-color-primary: #ed6b31; // $wmOrange4
+  --box-color-primary-variant: #ffe5da; // $wmOrange1
+
+  --box-color-primary-on-contrast-background: #ed6b31; // $wmOrange4
+  --box-color-primary-variant-on-contrast-background: #ffe5da; // $wmOrange1
+
+  --box-color-secondary-lighter: #9b5c80; //wmAubergine1
+  --box-color-secondary: #672a4e; // $wmAubergine2
+  --box-color-secondary-darker: #36122e; // $wmAubergine3
+
+  --box-color-secondary-lighter-on-contrast-background: #9b5c80; //wmAubergine1
+  --box-color-secondary-on-contrast-background: #672a4e; // $wmAubergine2
+  --box-color-secondary-darker-on-contrast-background: #36122e; // $wmAubergine3
+
+  --box-color-background: #ffffff; // $wmWhite
+  --box-color-background-secondary: #f3f4f7; // $wmGrey1
+  --box-color-background-contrast: #1c1b21; // $wmBlue5;
+  --box-color-background-active: #672a4e; // $wmAubergine2
+
+  --box-color-white-rgb: 255, 255, 255; // $wmWhite
+  --box-color-white: #ffffff; // $wmWhite
+  --box-color-grey-lightest: #f3f4f7; // $wmGrey1
+  --box-color-grey-lighter: #e5e6eb; // $wmGrey9
+  --box-color-grey: #acacbb; // $wmGrey3
+  --box-color-grey-darker: #757585; // $wmGrey4 & $wmBlue9
+  --box-color-grey-darkest: #1c1b21; // $wmGrey8 & $wmBlue5
+  --box-color-black: #000000; // $wmBlack
+  --box-color-black-rgb: 0, 0, 0;
+  --box-color-black-overlay: rgba(0, 0, 0, 0.3);
+
+  --box-color-negative: #e74854; // $wmRed4
+  --box-color-negative-light: #fbe4e5; // $wmRed1
+  --box-color-positive: #47a68c; // $wmGreen2
+  --box-color-positive-light: #eaf7f1; // $wmGreen1
+  --box-color-neutral: #f8af2a; // $wmYellow3
+  --box-color-neutral-light: #f4deb9; //$wmYellow2
+}

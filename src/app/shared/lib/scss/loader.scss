@@ -1,0 +1,33 @@
+@import './fonts';
+@import './colors';
+
+.wm-loader {
+  $self: &;
+  $spinner: '__spinner.mat-progress-spinner circle';
+
+  &__primary #{ $self }#{ $spinner } {
+    stroke: box-color(primary);
+  }
+
+  &__secondary #{ $self }#{ $spinner } {
+    stroke: box-color(secondary);
+  }
+
+  &__primary-on-contrast-background #{ $self }#{ $spinner } {
+    stroke: box-color(primary-on-contrast-background);
+  }
+
+  &__secondary-on-contrast-background #{ $self }#{ $spinner } {
+    stroke: box-color(secondary-on-contrast-background);
+  }
+
+  &__spinner-background {
+    &.mat-progress-spinner circle {
+      stroke: box-color(grey-lightest) !important;
+    }
+
+    &--error.mat-progress-spinner circle {
+      stroke: box-color(negative) !important;
+    }
+  }
+}

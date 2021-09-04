@@ -1,0 +1,23 @@
+<div class="wm-input">
+  <label *ngIf="label" class="wm-input__label">{{ label }}</label>
+
+  <div class="wm-input__container">
+    <input
+      #input
+      [attr.placeholder]="placeholder"
+      [class.wm-input__input--error]="invalidate"
+      [maxlength]="maxLength"
+      [ngModel]="value"
+      (ngModelChange)="onValueChange($event)"
+      (blur)="onTouch(); handleBlur($event)"
+      (focus)="handleFocus($event)"
+      class="wm-input__input"
+      [disabled]="disabled"
+    />
+    <div *ngIf="maxLength" class="wm-input__length-info">
+      {{ value ? value.length : 0 }} / {{ maxLength }}
+    </div>
+  </div>
+
+  <p *ngIf="invalidate && errorText" class="wm-input__error">{{ errorText }}</p>
+</div>

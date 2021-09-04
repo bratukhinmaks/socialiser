@@ -1,11 +1,14 @@
-<div class="auth-wrapper" [ngStyle]="{flexDirection: type === 'login'  ? 'row' : 'row-reverse'}">
-    <div class="auth-container-action" [@appearFromAbove]="animationAppear">
-        <ng-container>
-            <router-outlet></router-outlet>
-        </ng-container>
+<ng-container *ngIf="type$ | async as type">
+    <div class="auth-wrapper" [ngStyle]="{flexDirection: type.type === 'login'  ? 'row-reverse' : 'row'}">
+        <div class="auth-container-action" >
+            <ng-container>
+                <router-outlet #outlet="outlet"></router-outlet>
+            </ng-container>
+        </div>
+        <div class="auth-container-placholder" [@slideInOut]='type.type'>
+            <app-placeholder [type]="type.type"></app-placeholder>
+        </div>
     </div>
-    <div class="auth-container-placholder" [@slideInOut]='animation'>
-        <app-placeholder [type]="type"></app-placeholder>
-    </div>
-</div>
+</ng-container>
+
 

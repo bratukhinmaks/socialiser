@@ -1,0 +1,120 @@
+@import './colors';
+
+@mixin hide-chip-ripple {
+  &.mat-chip.mat-standard-chip::after {
+    background: transparent;
+  }
+
+  &.mat-chip.mat-standard-chip:not(.mat-chip-disabled):active {
+    box-shadow: none;
+  }
+
+  .mat-chip-ripple {
+    display: none;
+  }
+}
+
+@mixin chip-base {
+  outline: none;
+  cursor: pointer;
+}
+
+.wm-data {
+  &-status {
+    @include hide-chip-ripple;
+
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+    outline: 0;
+
+    &__label {
+      font-size: 11px;
+      font-weight: 400;
+      color: box-color(grey-darker);
+      margin: 0 7px !important;
+    }
+
+    &__chip.mat-chip {
+      font-size: 11px;
+      font-weight: 700;
+      background-color: rgba(box-color(secondary-lighter), 0.1) !important;
+      color: box-color(secondary) !important;
+      opacity: 1 !important;
+    }
+  }
+
+  &-target.mat-chip {
+    @include hide-chip-ripple;
+    @include chip-base;
+
+    min-width: 32px;
+    font-size: 13px;
+    background-color: box-color(grey-lightest);
+    border: 1px solid box-color(grey-lighter);
+    color: box-color(grey-darker);
+    margin-right: 20px;
+
+    &.wm-small {
+      font-size: 12px;
+      &.mat-standard-chip {
+        min-height: 26px !important;
+      }
+    }
+
+    &:hover {
+      background-color: box-color(white);
+      color: box-color(grey-darkest);
+      border-color: box-color(grey-darker);
+    }
+
+    &:active {
+      background-color: box-color(grey-lightest);
+    }
+
+    &.wm-active {
+      background-color: box-color(secondary);
+      color: box-color(white);
+      border: none;
+
+      &:active {
+        background-color: box-color(grey-lightest);
+        color: box-color(grey-darkest);
+      }
+    }
+  }
+
+  &-logic.mat-chip {
+    @include hide-chip-ripple;
+    @include chip-base;
+
+    min-width: 60px;
+    opacity: 1 !important;
+    background-color: box-color(white);
+    color: box-color(grey-darker);
+    border: 1px solid box-color(grey-lighter);
+
+    &.mat-standard-chip {
+      justify-content: center;
+    }
+
+    &.wm-green {
+      background-color: box-color(positive-light);
+      color: box-color(positive);
+      border: 1px solid box-color(positive);
+    }
+
+    &.wm-red {
+      background-color: box-color(negative-light);
+      color: box-color(negative);
+      border: 1px solid box-color(negative);
+    }
+
+    &.wm-blue {
+      background-color: #dae0ee; // Color is not defined in colors.scss
+      color: #244ca4; // Color is not defined in new pallette
+      border: 1px solid #244ca4; // Color is not defined in new pallette
+    }
+  }
+}

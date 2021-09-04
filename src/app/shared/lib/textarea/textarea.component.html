@@ -1,0 +1,23 @@
+<div class="wm-textarea">
+  <label *ngIf="label" class="wm-textarea__label">{{ label }}</label>
+
+  <div class="wm-textarea__container">
+    <textarea
+      #textarea
+      [attr.placeholder]="placeholder"
+      [class.wm-textarea__textarea--error]="invalidate"
+      [class.wm-textarea__textarea--with-counter]="!!maxLength"
+      [maxlength]="maxLength"
+      [disabled]="disabled"
+      [ngModel]="value"
+      (ngModelChange)="onValueChange($event)"
+      (blur)="onTouch()"
+      class="wm-textarea__textarea"
+    ></textarea>
+    <div *ngIf="maxLength" class="wm-textarea__length-info">
+      {{ value ? value.length : 0 }} / {{ maxLength }}
+    </div>
+  </div>
+
+  <p *ngIf="invalidate && errorText" class="wm-textarea__error">{{ errorText }}</p>
+</div>

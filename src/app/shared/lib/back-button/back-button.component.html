@@ -1,0 +1,13 @@
+<div class="wm-back-button__container" data-test="WM_BACK_BUTTON">
+  <i-feather class="wm-back-button__arrow" name="chevron-left"></i-feather>
+  <span class="wm-subtitle wm-back-button__text">
+    {{ initialText }}
+  </span>
+  <span 
+    *ngIf="targetLocation"
+    class="wm-subtitle wm-back-button__text wm-back-button__text--location"
+  >
+    &nbsp;
+    {{ targetLocation }}
+  </span>
+</div>

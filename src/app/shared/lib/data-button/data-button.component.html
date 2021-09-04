@@ -1,0 +1,15 @@
+<div class="wm-data-button" (click)="onDataButtonClick($event)" [ngClass]="{ 'wm-data-button--disabled': disabled }">
+  <span class="wm-data-button__data-source wm-text" *ngIf="source">
+    {{ source }}
+  </span>
+  <span class="wm-data-button__data wm-text">
+    {{ data }}
+  </span>
+  <span class="wm-data-button__data-answer wm-text" *ngIf="source && answer">
+    {{ answer }}
+  </span>
+
+  <span class="wm-data-button__remove" (click)="onRemoveClick($event)">
+      <i-feather name="x-circle"></i-feather>
+    </span>
+</div>

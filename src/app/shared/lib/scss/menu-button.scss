@@ -1,0 +1,23 @@
+@import './form-elements.scss';
+@import './buttons.scss';
+
+.mat-menu-item.wm-menu-item {
+  height: 32px;
+  line-height: 32px;
+  color: box-color(grey-darkest);
+  width: 100%;
+
+  &-toggle {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    line-height: 32px;
+    color: box-color(grey-darkest);
+    width: 100%;
+
+    mat-slide-toggle {
+      @include toggle();
+      margin-right: 15px;
+    }
+  }
+}

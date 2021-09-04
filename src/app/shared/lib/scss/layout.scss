@@ -1,0 +1,53 @@
+@use "sass:list";
+@use "sass:map";
+
+$screens-breakpoints: (
+  'xs': (
+    0px,
+    1279px,
+  ),
+  's': (
+    1280px,
+    1365px,
+  ),
+  'm': (
+    1366px,
+    1439px,
+  ),
+  'l': (
+    1440px,
+    1599px,
+  ),
+  'xl': (
+    1600px,
+    1919px,
+  ),
+  'xxl': (
+    1920px,
+    9999px,
+  ),
+);
+
+$screens-paddings: (
+  'xs': 40px,
+  's': 72px,
+  'm': 84px,
+  'l': 95px,
+  'xl': 128px,
+  'xxl': 144px,
+);
+
+@mixin media-breakpoints() {
+  @each $screen, $breakpoints in $screens-breakpoints {
+    @media (min-width: list.nth($breakpoints, 1)) and (max-width: list.nth($breakpoints, 2)) {
+      @content ($screen);
+    }
+  }
+}
+
+@mixin media-paddings() {
+  @include media-breakpoints using($screen) {
+    padding-left: map.get($screens-paddings, $screen);
+    padding-right: map.get($screens-paddings, $screen);
+  }
+}

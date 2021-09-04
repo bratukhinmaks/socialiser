@@ -1,0 +1,12 @@
+<div class="wm-tooltip-container">
+  <div
+    [class]="'wm-tooltip' +  ' wm-tooltip--arrow-' + arrowPosition + (type ? ' wm-tooltip--' + type : '')"
+    [style.maxWidth]="maxWidth || ''"
+  >
+    <h6 class="wm-tooltip__title wm-h6" *ngIf="title">{{ title }}</h6>
+    <div class="wm-tooltip__text">
+      <span *ngIf="!contentTemplate">{{ text }}</span>
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </div>
+  </div>
+</div>

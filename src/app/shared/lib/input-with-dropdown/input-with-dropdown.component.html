@@ -1,0 +1,46 @@
+<div class="wm-input-with-dropdown" (click)="$event.stopPropagation()">
+  <label *ngIf="label" class="wm-input-with-dropdown__label"> {{ label }}</label>
+  <div class="wm-input-with-dropdown__container">
+    <input
+      #input
+      [attr.placeholder]="placeholder"
+      [maxlength]="maxLength"
+      [ngModel]="value"
+      (ngModelChange)="onValueChange($event)"
+      (blur)="onTouch()"
+      (focus)="openDropdown()"
+      class="wm-input-with-dropdown__input"
+      [disabled]="disabled"
+    />
+    <i-feather
+      *ngIf="icon; else counter"
+      [name]="icon"
+      class="wm-input-with-dropdown__icon"
+    ></i-feather>
+    <ng-template #counter>
+      <div *ngIf="maxLength" class="wm-input-with-dropdown__length">
+        {{ value?.length || 0 }} / {{ maxLength }}
+      </div></ng-template
+    >
+    <div *ngIf="isDropdownOpen && value.length" class="wm-input-with-dropdown__dropdown">
+      <div *ngIf="isLoading; else list" class="wm-input-with-dropdown__loader">
+        <wm-loader mode="indeterminate" diameter="50" strokeWidth="2"></wm-loader>
+      </div>
+      <ng-template #list>
+        <div class="wm-input-with-dropdown__content">
+          <p *ngIf="dropdownTitle || emptyTitle" class="wm-caption wm-input-with-dropdown__header">
+            {{ content.children?.length ? dropdownTitle : emptyTitle }}
+          </p>
+          <div #content (click)="closeDropdown()">
+            <ng-content></ng-content>
+          </div>
+          <div *ngIf="!content.children?.length && emptyDescription" class="list__empty">
+            <p class="wm-overline wm-input-with-dropdown__description">
+              {{ emptyDescription }}
+            </p>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

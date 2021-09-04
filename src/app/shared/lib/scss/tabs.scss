@@ -1,0 +1,65 @@
+@import '../scss/typography';
+
+.wm-tabs {
+  border-bottom: 1px solid transparent;
+
+  .mat-tab-header {
+    border-bottom-color: transparent;
+  }
+
+  &.mat-tab-nav-bar,&.mat-tab-group {
+    .mat-ink-bar {
+      background-color: box-color(primary);
+      height: 3px;
+    }
+  }
+
+  .mat-tab-link,.mat-tab-label {
+    @extend .wm-h6;
+    height: 36px;
+    padding: 0 32px;
+    align-items: flex-start;
+    min-width: initial;
+    text-align: center;
+    color: box-color(grey-darker);
+    border-bottom: 1px solid box-color(grey-lighter);
+    display: flex;
+    opacity: 1;
+
+    &.mat-tab-label-active {
+      color: box-color(background-contrast);
+    }
+
+    &.mat-tab-disabled {
+      color: box-color(grey-lighter);
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      color: box-color(grey-darkest);
+    }
+  }
+
+  &--small {
+    &.mat-tab-nav-bar,&.mat-tab-group {
+      .mat-ink-bar {
+        height: 2px;
+      }
+    }
+    .mat-tab-link {
+      height: 30px !important;
+      padding: 0 10px !important;
+      font-size: 11px !important;
+      line-height: 16px !important;
+      letter-spacing: 0.25px !important;
+    }
+  }
+
+  .mat-ripple-element {
+    /* This is the only way to remove ripple effect in all apps by using css classes only.
+    It could be done by using [disableRipple]="true", but because tabs are not a component (they were done by css classes)
+    this solution would force teams to change code of every application, as it wouldn't really depend on this library. */
+    height: 0 !important;
+  }
+
+}

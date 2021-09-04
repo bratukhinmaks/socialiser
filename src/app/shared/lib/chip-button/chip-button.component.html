@@ -1,0 +1,24 @@
+<button
+  class="wm-button-chip"
+  [class.active]="active"
+  [class.disabled]="disabled"
+  (click)="onChipClick()"
+>
+  <span>
+    <svg
+      [attr.width]="circleDiameter"
+      [attr.height]="circleDiameter"
+      [attr.viewBox]="circleViewBox"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        [attr.cx]="circleRadius"
+        [attr.cy]="circleRadius"
+        [attr.r]="circleRadius"
+        [attr.fill]="disabled ? wmColors.wmGrey2 : circleColor"
+      />
+    </svg>
+  </span>
+  <span>{{ text }}</span>
+</button>

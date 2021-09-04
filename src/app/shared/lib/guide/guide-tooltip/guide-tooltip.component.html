@@ -1,0 +1,49 @@
+<ng-container *ngIf="isVisible">
+  <div
+    #tooltip
+    *ngIf="{
+      isPrev: isPrev$ | async,
+      isNext: isNext$ | async,
+      visibleTooltipIndex: visibleTooltipIndex$ | async,
+      tooltipsQuantity: tooltipsQuantity$ | async
+    } as viewData"
+    class="wm-guide-tooltip {{ 'wm-guide-tooltip--' + arrowPosition }}"
+  >
+    <button
+      class="wm-button-link wm-guide-tooltip__button wm-guide-tooltip__close"
+      (click)="close()"
+    >
+      <i-feather name="x"></i-feather>
+    </button>
+    <div class="wm-guide-tooltip__outer-circle">
+      <div class="wm-guide-tooltip__inner-circle"></div>
+    </div>
+    <div class="wm-guide-tooltip__content">
+      <h6 class="wm-h6 wm-guide-tooltip__title">
+        {{ title }}
+      </h6>
+      <p class="wm-subtitle-small wm-guide-tooltip__desc">
+        <ng-content></ng-content>
+      </p>
+      <div class="wm-guide-tooltip__footer">
+        <span class="wm-guide-tooltip__footer__position" *ngIf="viewData?.tooltipsQuantity > 1">
+          {{ viewData?.visibleTooltipIndex + 1 }} / {{ viewData?.tooltipsQuantity }}
+        </span>
+        <button
+          *ngIf="viewData?.isPrev"
+          class="wm-button-link wm-guide-tooltip__button wm-guide-tooltip__button"
+          (click)="prev()"
+        >
+          <i-feather name="chevron-left"></i-feather>
+        </button>
+        <button
+          *ngIf="viewData?.isNext"
+          class="wm-button-link wm-guide-tooltip__button"
+          (click)="next()"
+        >
+          <i-feather name="chevron-right"></i-feather>
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>

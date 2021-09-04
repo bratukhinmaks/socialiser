@@ -1,0 +1,32 @@
+@import '../scss/colors.scss';
+
+.wm-arrow {
+  cursor: pointer;
+
+  &__icon {
+    outline: transparent;
+    transition: 0.3s;
+
+    &--expanded {
+      transform: rotate(-180deg);
+    }
+
+    &--primary {
+      color: box-color(primary);
+    }
+
+    &--secondary {
+      color: box-color(secondary);
+    }
+
+    &--primary-on-contrast-background {
+      color: box-color(primary-on-contrast-background);
+    }
+
+    &--secondary-on-contrast-background {
+      color: box-color(secondary-on-contrast-background);
+    }
+
+  }
+
+}

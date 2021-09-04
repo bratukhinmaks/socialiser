@@ -1,0 +1,619 @@
+@import './colors';
+
+$addButtonShadow: 0px 20px 20px rgba(40, 40, 70, 0.1);
+
+@mixin hide-ripple {
+  .mat-ripple {
+    display: none;
+  }
+}
+
+@mixin button-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin hide-focus-overlay {
+  .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+@mixin dashed($width, $height, $height-right, $frequency) {
+  background: linear-gradient(90deg, box-color(grey) $frequency, transparent $frequency),
+    linear-gradient(90deg, box-color(grey) $frequency, transparent $frequency),
+    linear-gradient(0deg, box-color(grey) $frequency, transparent $frequency),
+    linear-gradient(0deg, box-color(grey) $frequency, transparent $frequency);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: $width $height, $width $height, $height $width, $height-right $width;
+  background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+  border-radius: 6px;
+}
+
+@mixin toggle {
+  @include hide-ripple();
+
+  height: 12px;
+  line-height: 12px;
+
+  &.mat-checked {
+    .mat-slide-toggle-thumb-container {
+      transform: translate3d(12px, 0, 0);
+    }
+
+    .mat-slide-toggle-bar {
+      background: box-color(primary);
+    }
+  }
+
+  .mat-slide-toggle-bar {
+    height: 12px;
+    width: 24px;
+    background: box-color(grey);
+  }
+
+  .mat-slide-toggle-thumb-container {
+    height: 12px;
+    width: 20px;
+    top: 2px;
+    left: 2px;
+  }
+
+  .mat-slide-toggle-thumb {
+    width: 8px;
+    height: 8px;
+    background: box-color(white);
+    box-shadow: none;
+  }
+
+  &.wm-medium {
+    &.mat-checked {
+      .mat-slide-toggle-thumb-container {
+        transform: translate3d(16px, 0, 0);
+      }
+    }
+
+    .mat-slide-toggle-bar {
+      height: 16px;
+      width: 32px;
+    }
+
+    .mat-slide-toggle-thumb-container {
+      height: 14px;
+      width: 22px;
+      top: 2.5px;
+      left: 2.5px;
+    }
+
+    .mat-slide-toggle-thumb {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  &.wm-big {
+    &.mat-checked {
+      .mat-slide-toggle-thumb-container {
+        transform: translate3d(22px, 0, 0);
+      }
+    }
+
+    .mat-slide-toggle-bar {
+      height: 20px;
+      width: 42px;
+      border-radius: 20px;
+    }
+
+    .mat-slide-toggle-thumb-container {
+      top: 3px;
+      left: 3px;
+    }
+
+    .mat-slide-toggle-thumb {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &.wm-small,
+  &.wm-medium,
+  &.wm-big {
+    &:hover {
+      .mat-slide-toggle-bar {
+        background: box-color(grey-darker);
+      }
+
+      &.mat-checked {
+        .mat-slide-toggle-bar {
+          background: box-color(primary);
+          filter: saturate(120%);
+        }
+      }
+    }
+  }
+}
+
+.wm-button {
+  &-add.mat-fab {
+    @include hide-ripple();
+
+    background: box-color(primary);
+    box-shadow: $addButtonShadow;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: box-color(white);
+
+    &:not([disabled]):active:not([class*='mat-elevation-z']) {
+      box-shadow: $addButtonShadow;
+      filter: none;
+    }
+
+    &:hover {
+      background: box-color(secondary);
+      filter: none;
+    }
+
+    &:active {
+      background: box-color(secondary-lighter);
+      filter: none;
+    }
+
+    i-feather {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &-primary.mat-button {
+    @include hide-ripple();
+
+    background: box-color(primary);
+    color: box-color(white);
+    height: 40px;
+    min-width: 135px;
+    transition: 0.2s all ease;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+
+    &.wm-auto-size {
+      padding: 0 32px;
+      min-width: auto;
+    }
+
+    &.wm-button-primary--small {
+      height: 32px;
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    &.wm-alt,
+    &.wm-cancel {
+      background: box-color(background-contrast);
+      color: box-color(white);
+    }
+
+    &.wm-cancel {
+      &:hover,
+      &:active,
+      &:hover:not([disabled]) {
+        background: box-color(background-contrast);
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      background: box-color(secondary);
+    }
+
+    &:active {
+      background: box-color(secondary-lighter);
+    }
+
+    &:hover:not([disabled]) {
+      box-shadow: 0px 10px 10px rgba(29, 29, 50, 0.1);
+    }
+
+    &[disabled] {
+      background: box-color(grey-darker);
+      opacity: 0.5;
+      color: box-color(white);
+    }
+  }
+
+  &-secondary.mat-stroked-button {
+    @include hide-ripple();
+
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    background: box-color(white);
+    color: box-color(grey-darkest);
+    border: 1px solid box-color(grey);
+    height: 32px;
+    min-width: 70px;
+    border-radius: 6px;
+    transition: 0.2s all ease;
+
+    &.wm-cta {
+      padding: 0 20px;
+      min-width: auto;
+      border: none;
+      background: box-color(primary);
+      color: box-color(white);
+
+      &:hover:not([disabled]) {
+        background: box-color(secondary);
+
+        .mat-button-focus-overlay {
+          opacity: 0;
+        }
+      }
+
+      &:active:not([disabled]) {
+        background: box-color(secondary-lighter);
+      }
+    }
+
+    i-feather,
+    img {
+      width: 12px;
+      height: 12px;
+      margin-left: 5px;
+    }
+
+    &.wm-auto-size {
+      padding: 0 20px;
+      min-width: auto;
+    }
+
+    &.wm-dark {
+      color: box-color(white);
+      background: transparent;
+      border-color: box-color(grey);
+
+      &:hover:not([disabled]) {
+        border-color: box-color(grey);
+        color: box-color(grey-darkest);
+      }
+
+      &:active:not([disabled]) {
+        border-color: box-color(grey);
+      }
+
+      &.wm-active:not([disabled]) {
+        border: none;
+      }
+
+      &[disabled] {
+        border-color: box-color(grey-darker);
+        color: box-color(grey-darker);
+        font-weight: 700;
+      }
+    }
+
+    &:hover:not([disabled]) {
+      border-color: box-color(grey-darker);
+      background: box-color(white);
+
+      .mat-button-focus-overlay {
+        opacity: 0;
+      }
+    }
+
+    &:active:not([disabled]) {
+      background: box-color(grey-lightest);
+      border-color: box-color(grey-darker);
+    }
+
+    &[disabled] {
+      border-color: box-color(grey);
+      opacity: 0.5;
+    }
+
+    &.wm-active:not([disabled]) {
+      background: box-color(secondary);
+      color: box-color(white);
+
+      &:hover:not([disabled]) {
+        background: box-color(secondary);
+        color: box-color(white);
+      }
+
+      &:active:not([disabled]) {
+        background: box-color(grey-lightest);
+        border-color: box-color(grey-darker);
+        color: box-color(grey-darkest);
+      }
+    }
+  }
+
+  &-tertiary.mat-stroked-button {
+    @include hide-ripple();
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+
+    background: box-color(white);
+    color: box-color(grey-darker);
+    border: 1px solid box-color(grey);
+    height: 24px;
+    min-width: 70px;
+    border-radius: 6px;
+    transition: 0.2s all ease;
+    padding: 0 10px;
+    box-shadow: none;
+
+    &.wm-auto-size {
+      padding: 0 16px;
+      min-width: auto;
+    }
+
+    &.wm-dark {
+      background: box-color(background-contrast);
+      color: box-color(white);
+    }
+
+    &:hover:not([disabled]) {
+      border-color: box-color(grey-darker);
+      background: box-color(white);
+      color: box-color(grey-darkest);
+
+      .mat-button-focus-overlay {
+        opacity: 0;
+      }
+    }
+
+    &:active:not([disabled]) {
+      background: box-color(grey-lightest);
+      border-color: box-color(grey-darker);
+      color: box-color(grey-darkest);
+    }
+
+    &[disabled] {
+      border-color: box-color(grey);
+      opacity: 0.5;
+    }
+
+    i-feather {
+      width: 12px;
+      height: 12px;
+      margin-left: 5px;
+    }
+  }
+
+  &-toggle.mat-slide-toggle {
+    @include toggle();
+  }
+
+  &-navigation.mat-fab {
+    @include hide-ripple();
+
+    background: box-color(primary);
+    box-shadow: $addButtonShadow;
+
+    &:not([disabled]):active:not([class*='mat-elevation-z']) {
+      box-shadow: $addButtonShadow;
+    }
+
+    &:hover {
+      background: box-color(secondary);
+    }
+
+    &:active {
+      background: box-color(secondary-lighter);
+    }
+  }
+
+  &-link {
+    @include button-base;
+
+    width: 28px;
+    height: 28px;
+    color: box-color(grey-darkest);
+    transition: 0.2s all ease;
+    border-radius: 4px;
+
+    &:hover {
+      background: box-color(grey-lighter);
+    }
+
+    i-feather {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &-function {
+    @include button-base;
+
+    width: 34px;
+    height: 34px;
+    color: box-color(grey);
+    transition: 0.2s all ease;
+    border-radius: 4px;
+
+    &:hover {
+      background: box-color(grey-lighter);
+      color: box-color(grey-darkest);
+    }
+
+    i-feather {
+      width: 15px;
+      height: 15px;
+    }
+
+    &.wm-red {
+      &:hover {
+        background-color: box-color(negative-light);
+        color: box-color(negative);
+      }
+    }
+  }
+
+  &-navigation-circle.mat-fab {
+    @include button-base;
+
+    width: 48px;
+    height: 48px;
+    background-color: box-color(secondary-darker);
+    border-radius: 50%;
+    color: box-color(white);
+    transition: 0.1s linear;
+
+    svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    i-feather {
+      width: 60%;
+      height: initial;
+      line-height: 1;
+    }
+
+    i-feather[name='chevron-right'] {
+      margin-left: 6%;
+    }
+
+    i-feather[name='chevron-left'] {
+      margin-right: 6%;
+    }
+
+    .mat-button-wrapper {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover,
+    &:active {
+      transform: scale(1.12);
+    }
+
+    &:hover {
+      background-color: box-color(secondary);
+    }
+
+    &:active {
+      background-color: box-color(secondary-lighter);
+    }
+  }
+
+  &-status.mat-button {
+    @include hide-ripple;
+    @include hide-focus-overlay;
+
+    min-width: 76px;
+    height: 26px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+
+    &.wm-white {
+      background-color: box-color(white);
+      color: box-color(grey-darker);
+      border: 1px solid #e5e1f1;
+    }
+
+    &.wm-green {
+      background-color: box-color(positive-light);
+      color: box-color(positive);
+    }
+
+    // START - not in color pallette
+    &.wm-grey {
+      background-color: box-color(grey-lighter);
+      color: box-color(positive);
+
+      &.wm-dark {
+        background-color: rgba($wmGrey5, 0.15);
+        color: $wmGrey5;
+        border: 1px solid box-color(grey-darker);
+      }
+    }
+
+    &.wm-purple {
+      background-color: #e5e1f1;
+      color: $wmPurple3;
+
+      &.wm-dark {
+        background-color: #292539;
+        color: $wmPurple1;
+        border: 1px solid $wmPurple3;
+      }
+    }
+
+    &.wm-blue {
+      background-color: #ebf3fe;
+      color: #2f80ed;
+
+      &.wm-dark {
+        background-color: #1f2944;
+        color: $wmBlue1;
+        border: 1px solid $wmBlue3;
+      }
+    }
+
+    &.wm-orange {
+      background-color: #fff5e6;
+      color: #ff9900;
+    }
+    // END - not in color pallette
+
+    &.wm-red {
+      background-color: box-color(negative-light);
+      color: box-color(negative);
+    }
+  }
+
+  &-circle.mat-fab {
+    @include hide-ripple();
+    @include button-base();
+    @include hide-focus-overlay();
+
+    height: 32px;
+    width: 32px;
+    background: box-color(primary);
+    color: box-color(white);
+    box-shadow: none;
+
+    &.wm-remove {
+      background-color: box-color(negative);
+    }
+
+    &.wm-check {
+      background-color: box-color(positive);
+    }
+
+    &:hover:not(.wm-remove):not(.wm-check) {
+      background: box-color(secondary);
+      filter: none;
+    }
+
+    &:active {
+      box-shadow: none !important;
+    }
+
+    &:active:not(.wm-remove):not(.wm-check) {
+      background: box-color(secondary);
+      filter: none;
+    }
+
+    i-feather {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

@@ -7,10 +7,23 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3">
                             <a href="#" class="link img_link w-200">
-                                <img src="uploads/socializerlogoheader6-1617120681.svg" alt="Logo" class="img-fluid h-full w-full" data-aos="fade-down" data-aos-delay="750" srcset="uploads/socializerlogoheader6-1617120681.svg 2x">
+                                <img src="assets/logo.svg" alt="Logo" class="img-fluid h-full w-full" data-aos="fade-down" data-aos-delay="750" srcset="assets/logo.svg 2x">
                             </a>
                         </div>
                         <div class="col-lg-9 text-right" data-aos="fade-down" data-aos-delay="1000">
+                            <div class="language-picker js-language-picker">
+                                <div class="language-picker__form">
+                                    <label for="language-picker-select">Select your language</label>
+                                    <ng-select [items]="availableLanguages"
+                                               id="language-picker-select"
+                                               [(ngModel)]="selectedLang"
+                                               bindLabel="label"
+                                               bindValue="value"
+                                               (change)="setLanguage($event)"
+                                               >
+                                    </ng-select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -25,16 +38,16 @@
                         </a>
                     </div>
                     <h1 data-aos="fade-down" data-aos-delay="0">
-                        Great tool to boost your startup
+                        {{'MAIN.TITLE' | translate }}
                     </h1>
                     <div class="mt-20 mw-500 color-heading f-18 medium op-7 text-adaptive" data-aos="fade-down" data-aos-delay="250">
                         We made it so beautiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection!
                     </div>
                     <div class="mt-70 d-block d-sm-flex flex-wrap justify-content-center buttons" data-aos="fade-down" data-aos-delay="500">
-                        <a href="#" class="btn lg action-1">
+                        <a href="#" routerLink="/auth" class="btn lg action-1">
                             Sign In
                         </a>
-                        <a href="#" class="btn ml-10 lg border-gray color-main">
+                        <a href="#" routerLink="/auth" class="btn ml-10 lg border-gray color-main">
                             Sign Up
                         </a>
                     </div>
@@ -164,51 +177,6 @@
         </div>
     </section>
     <!-- Form 2 -->
-    <section class="bg-light form_2">
-        <div class="container px-xl-0">
-            <div class="row justify-content-center text-center text-md-left">
-                <div class="col-lg-5 col-md-6 col-sm-10">
-                    <form action="form-handler.php" method="post" class="pt-105 pb-100">
-                        <h2 class="mb-45 small" data-aos="fade-down" data-aos-delay="0">
-                            Sign Up to Discover Startup Features
-                        </h2>
-                        <div data-aos="fade-down" data-aos-delay="0">
-                            <div class="mb-10 f-14 semibold text-uppercase sp-20">
-                                Name
-                            </div>
-                            <input type="text" name="name" placeholder="Your name" required="required" class="input mb-25 w-full lg border-gray focus-action-1 color-heading placeholder-gray text-center text-md-left">
-                        </div>
-                        <div data-aos="fade-down" data-aos-delay="0">
-                            <div class="mb-10 f-14 semibold text-uppercase sp-20">
-                                Email
-                            </div>
-                            <input type="email" name="email" placeholder="Your email" required="required" class="input mb-25 w-full lg border-gray focus-action-1 color-heading placeholder-gray text-center text-md-left">
-                        </div>
-                        <div data-aos="fade-down" data-aos-delay="0">
-                            <div class="mb-10 f-14 semibold text-uppercase sp-20">
-                                Password
-                            </div>
-                            <input type="password" name="password" placeholder="Your password" required="required" class="input mb-25 w-full lg border-gray focus-action-1 color-heading placeholder-gray text-center text-md-left">
-                        </div>
-                        <div class="mt-25 d-flex flex-wrap align-items-center buttons" data-aos="fade-down" data-aos-delay="0">
-                            <button class="btn mr-20 mb-20 mb-xl-0 w-210 lg action-1">
-                                Sign Up
-                            </button>
-                            <div class="color-heading text-adaptive">
-                                By signing up you agree to
-                                <br>Our Terms and Privacy Policy
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-sm-1">
-                </div>
-                <div class="col-lg-6 col-md-5 d-none d-md-block overflow-hidden img_holder" data-aos="fade-down" data-aos-delay="750">
-                    <img src="i/form_2_bg.jpg" srcset="i/form_2_bg@2x.jpg 2x" alt="" class="h-full absolute">
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Blog 24 -->
     <section class="pt-50 pb-50 bg-light blog_24">
         <div class="container px-xl-0">

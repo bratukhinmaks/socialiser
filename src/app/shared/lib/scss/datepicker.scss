@@ -1,0 +1,98 @@
+@import "../scss/colors";
+@import "./form-elements.scss";
+
+.wm-datepicker {
+  &.mat-calendar,
+  &.mat-datepicker-content {
+    height: initial !important;
+  }
+
+  .cdk-keyboard-focused .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected),
+  .cdk-program-focused .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected),
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
+    background-color: box-color(primary-variant);
+    color: box-color(primary);
+  }
+
+  .mat-calendar-body-active > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
+    background-color: box-color(primary-variant);
+    color: box-color(primary);
+  }
+
+  .mat-calendar-body-cell-content {
+    border: none;
+  }
+
+  .mat-calendar-body-selected {
+    background-color: box-color(primary);
+    color: box-color(white);
+  }
+
+  &-label {
+    position: absolute;
+    top: -31px;
+    left: -15px;
+    font-size: 12px;
+    color: box-color(grey-darker);
+  }
+
+  &-form-field.mat-form-field,
+  &-form-field-small.mat-form-field {
+    @include input-base;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    position: relative;
+
+    .mat-form-field-label-wrapper {
+      padding: 0;
+      top: 0;
+    }
+
+    .mat-form-field-label {
+      transform: none;
+      top: 0;
+    }
+
+    .mat-form-field-wrapper {
+      padding: 0;
+      width: 100%;
+    }
+
+    .mat-form-field-infix {
+      border-top: 0;
+      padding: 0;
+      width: initial;
+    }
+
+    .mat-form-field-underline {
+      display: none;
+    }
+
+    .mat-icon-button {
+      height: 100%;
+    }
+
+    .mat-form-field-flex {
+      align-items: center;
+    }
+
+    mat-datepicker-toggle i-feather {
+      color: box-color(primary);
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.wm-datepicker-form-field-small.mat-form-field {
+  height: 32px;
+  font-size: 12px;
+}
+
+.cdk-overlay-pane.mat-datepicker-popup {
+  margin-top: 15px;
+  margin-left: -15px;
+}

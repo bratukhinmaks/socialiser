@@ -1,0 +1,26 @@
+<div class="wm-number-input">
+  <label *ngIf="label" class="wm-number-input__label">{{ label }}</label>
+
+  <div class="wm-number-input__container">
+    <input
+      #input
+      [attr.placeholder]="placeholder"
+      [class.wm-number-input__input--error]="invalidate"
+      [class.wm-number-input__input--masked]="showMask && maskVisible && maskValue"
+      type="number"
+      [min]="min"
+      [max]="max"
+      [step]="step"
+      [ngModel]="value"
+      (ngModelChange)="onValueChange($event)"
+      (blur)="onBlur()"
+      (focus)="onFocus()"
+      class="wm-number-input__input"
+      [disabled]="disabled"
+      wmOnlyNumbers
+    />
+    <span *ngIf="maskVisible && showMask" (click)="input.focus()" class="wm-number-input__field-mask">{{ maskValue }}</span>
+  </div>
+
+  <p *ngIf="invalidate && errorText" class="wm-number-input__error">{{ errorText }}</p>
+</div>

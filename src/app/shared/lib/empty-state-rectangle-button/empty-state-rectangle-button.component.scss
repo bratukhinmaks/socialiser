@@ -1,0 +1,72 @@
+@import '../scss/colors';
+
+.wm-empty-state-rectangle-button {
+  $self: &;
+  width: 100%;
+  display: grid;
+  grid-template-columns: fit-content(1em);
+  grid-auto-rows: fit-content(1em);
+  align-items: center;
+  background-color: box-color(white);
+  cursor: pointer;
+  user-select: none;
+
+  &__border {
+    grid-column: 1;
+    grid-row: 1;
+
+    rect {
+      fill: none;
+      stroke: box-color(grey);
+      stroke-width: 1px;
+      stroke-dasharray: 3px 3px;
+      shape-rendering: geometricPrecision;
+      stroke-dashoffset: 12px;
+    }
+  }
+
+  &:not(&--disabled) {
+    rect {
+      stroke: box-color(grey);
+    }
+
+    &:hover {
+      svg {
+        rect {
+          stroke: box-color(background-contrast);
+          fill: box-color(grey-lightest);
+        }
+      }
+
+      #{ $self }__content {
+        color: box-color(grey-darkest);
+      }
+    }
+
+    &:active {
+      #{ $self }__content {
+        color: box-color(grey-darkest);
+      }
+
+      svg {
+        rect {
+          stroke: box-color(background-contrast);
+          stroke-dasharray: 0px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 5px 5px;
+    z-index: 1000;
+    color: box-color(grey-darkest);
+
+    &--disabled {
+      color: box-color(grey);
+      cursor: default;
+    }
+  }
+}

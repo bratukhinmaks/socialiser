@@ -1,0 +1,77 @@
+@import '../scss/colors';
+
+:host {
+  width: 100%
+}
+
+.wm-multiselect-items {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+  color: box-color(white);
+  font-weight: 400;
+  position: relative;
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    background-color: box-color(primary);
+    border-radius: 4px;
+    padding: 3px 6px 3px 4px;
+    
+    &-container {
+      margin-right: 4px;
+
+      &:last-child {
+        overflow: hidden;
+      }
+    }
+
+    &-list {
+      max-width: calc(100% - 36px);
+      display: flex;
+    }
+  }
+
+  &__close {
+    line-height: 1;
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+  }
+
+  &__counter {
+    margin-left: auto;
+    background: box-color(grey-darker);
+    border-radius: 4px;
+    padding: 3px 7px;
+  }
+
+  &__dots {
+    color: box-color(grey-darkest);
+    margin: 0 6px;
+  }
+
+  &__text {
+    color: box-color(grey-darkest);
+    margin-left: 8px;
+  }
+
+  &__label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__canvas {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -100;
+  }
+}
+

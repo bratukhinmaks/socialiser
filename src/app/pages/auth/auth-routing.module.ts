@@ -4,11 +4,15 @@ import {UnauthGuard, AuthGuard} from '@app/guards';
 import {AuthMainComponent} from '@app/pages/auth/pages/auth-main/auth.main';
 import {RegistrationComponent} from '@app/pages/auth/pages/registration/registration.component';
 import {LoginComponent} from '@app/pages/auth/pages/login/login.component';
+import {TypeResolver} from '@app/pages/auth/pages/services/type.resolver';
 
 
 const routes: Routes = [
     {
-        path: '', component: AuthMainComponent, children: [
+        path: '', resolve: {type: TypeResolver}, component: AuthMainComponent, children: [
+            {
+                path: '', redirectTo: 'login'
+            },
             {
                 path: 'login',
                 data: {type: 'login'},

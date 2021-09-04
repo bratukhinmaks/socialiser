@@ -1,0 +1,24 @@
+<div [class]="'wm-card' + ' wm-card--' + type" data-test="WM.CARD.CONTAINER">
+  <div
+    *ngIf="showIcon"
+    class="wm-card__icon"
+    [ngClass]="{ 'wm-card__icon--selected': selected }"
+    (click)="onClick()"
+    data-test="WM.CARD.ICON_CONTAINER"
+  >
+    <i-feather [name]="icon" data-test="WM.CARD.ICON"></i-feather>
+  </div>
+  <div *ngIf="imagePath" class="wm-card__image">
+    <img [src]="imagePath" alt="image" data-test="WM.CARD.IMAGE" />
+  </div>
+  <p *ngIf="tagline" class="wm-card__tagline wm-caption-small" data-test="WM.CARD.TAGLINE">
+    {{ tagline }}
+  </p>
+  <p *ngIf="title" class="wm-card__title" data-test="WM.CARD.TITLE">{{ title }}</p>
+  <p *ngIf="subtitle" class="wm-card__subtitle wm-subtitle-small" data-test="WM.CARD.SUBTITLE">
+    {{ subtitle }}
+  </p>
+  <p *ngIf="description" class="wm-card__description wm-text-small" data-test="WM.CARD.DESCRIPTION">
+    {{ description }}
+  </p>
+</div>

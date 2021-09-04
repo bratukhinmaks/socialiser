@@ -1,0 +1,38 @@
+.greenhouse-theme {
+  --box-color-primary: #6300a7;
+  --box-color-primary-variant: #e0cced;
+
+  --box-color-primary-on-contrast-background: #33a299;
+  --box-color-primary-variant-on-contrast-background: #d4ebea;
+
+  --box-color-secondary-lighter: #ff0c68;
+  --box-color-secondary: #e30b5d;
+  --box-color-secondary-darker: #b20949;
+
+  --box-color-secondary-lighter-on-contrast-background: #ff0c68;
+  --box-color-secondary-on-contrast-background: #e30b5d;
+  --box-color-secondary-darker-on-contrast-background: #b20949;
+
+  --box-color-background: #ffffff;
+  --box-color-background-secondary: #eeeeee;
+  --box-color-background-contrast: #000000;
+  --box-color-background-active: #ff7a45;
+
+  --box-color-white-rgb: 255, 255, 255;
+  --box-color-white: #ffffff;
+  --box-color-grey-lightest: #eeeeee;
+  --box-color-grey-lighter: #cfcfcf;
+  --box-color-grey: #a1a1a1;
+  --box-color-grey-darker: #616161;
+  --box-color-grey-darkest: #000000;
+  --box-color-black: #000000;
+  --box-color-black-rgb: 0, 0, 0;
+  --box-color-black-overlay: rgba(0, 0, 0, 0.3);
+
+  --box-color-negative: #f71735;
+  --box-color-negative-light: #fee8eb;
+  --box-color-positive: #1dce6c;
+  --box-color-positive-light: #ddf8e9;
+  --box-color-neutral: #eed434;
+  --box-color-neutral-light: #fdf9e1;
+}

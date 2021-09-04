@@ -1,0 +1,31 @@
+@import '../scss/loader';
+
+*:focus {
+  outline: 0px;
+}
+
+.box-wrapper {
+  height: 100%;
+
+  @import '~@angular/material/prebuilt-themes/deeppurple-amber';
+  @import '~@ng-select/ng-select/themes/default.theme';
+
+  @import '../scss/colors';
+  @import '../scss/fonts';
+  @import '../scss/typography';
+  @import '../scss/buttons';
+  @import '../scss/tabs';
+  @import '../scss/main-navbar-buttons';
+  @import '../scss/select';
+  @import '../scss/radio-button';
+  @import '../scss/pointer';
+  @import '../scss/datepicker';
+  @import '../scss/slide-toggle';
+  @import '../scss/checkbox';
+  @import '../scss/main-navigation';
+  @import '../scss/file-upload';
+  @import '../scss/tooltip';
+  @import '../scss/data-buttons';
+  @import '../scss/scrollbars';
+  @import '../scss/circle-progress';
+}

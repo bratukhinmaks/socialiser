@@ -1,0 +1,36 @@
+@import './colors';
+
+.wm-circle-progress {
+  &--complete {
+    path {
+      stroke: box-color(positive);
+      fill: box-color(white);
+    }
+  }
+
+  &--incomplete {
+    path {
+      stroke: box-color(neutral);
+    }
+
+    circle:last-of-type {
+      stroke: box-color(grey-lighter);
+      fill: box-color(white);
+    }
+  }
+
+  &--background {
+    path {
+      stroke: box-color(white);
+    }
+
+    circle:last-of-type {
+      stroke: box-color(positive-light);
+      opacity: 0.3;
+    }
+  }
+
+  circle:not(:last-of-type) {
+    fill: box-color(positive);
+  }
+}

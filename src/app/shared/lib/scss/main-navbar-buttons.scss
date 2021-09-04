@@ -1,0 +1,43 @@
+@import '../scss/typography';
+
+.wm-main-navbar-buttons {
+  border-bottom: 1px solid transparent;
+  margin-bottom: 20px;
+
+  .mat-tab-header {
+    border-bottom-color: transparent;
+  }
+
+  &.mat-tab-nav-bar,&.mat-tab-group {
+    .mat-ink-bar {
+      background-color: box-color(primary);
+      height: 2px;
+    }
+  }
+
+  .mat-tab-link,.mat-tab-label {
+    @extend .wm-h6;
+    height: 66px;
+    padding: 20px 12px 0 12px;
+    min-width: initial;
+    text-align: center;
+    color: box-color(grey-darker);
+    border-bottom: 0;
+    opacity: 1;
+    align-items: flex-start;
+
+    &.mat-tab-label-active {
+      color: box-color(background-contrast);
+    }
+
+    &.mat-tab-disabled {
+      color: box-color(grey-lighter);
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      color: box-color(grey-darkest);
+    }
+  }
+
+}

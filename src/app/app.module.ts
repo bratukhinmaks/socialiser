@@ -39,9 +39,18 @@ import { reducers, effects } from './store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {LayoutComponent} from './layout/layout.component';
+import {HeaderComponent} from './components';
+import {MaterialModule} from './shared/material/material.module';
+import {DevexpressModule} from './shared/devexpress/devexpress.module';
+import {WmNgComponentsModule} from './shared/lib/wm-ng-components.module';
+import {HttpClient} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 
-import {LayoutComponent} from '@app/layout/layout.component';
-import {HeaderComponent} from '@app/components';
+export  function  HttpLoaderFactory(http: HttpClient) {
+    return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
     declarations: [
@@ -52,6 +61,9 @@ import {HeaderComponent} from '@app/components';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+
+        MaterialModule,
+        DevexpressModule,
 
         AppRoutingModule,
 
@@ -68,6 +80,17 @@ import {HeaderComponent} from '@app/components';
                 strictActionImmutability: true
             }
         }),
+
+        TranslateModule.forRoot({
+            loader: {
+                provide:  TranslateLoader,
+                useFactory:  HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+
+        WmNgComponentsModule,
+
         EffectsModule.forRoot(effects),
         StoreDevtools,
 

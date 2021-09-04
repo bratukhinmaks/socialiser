@@ -1,0 +1,53 @@
+<wm-wrapper>
+  <div class="confirmation-popup" data-test="WM_NG_COMPONENTS.CONFIRMATION_POPUP.CONTAINER">
+    <div class="confirmation-popup__header">
+      <i-feather name="x" [mat-dialog-close]="false"></i-feather>
+    </div>
+
+    <div
+      *ngIf="confirmationPopupData?.contentTemplate"
+      class="wm-h6 confirmation-popup__content"
+      data-test="WM_NG_COMPONENTS.CONFIRMATION_POPUP.CONTENT"
+    >
+      <ng-container *ngIf="confirmationPopupData?.contentTemplate">
+        <ng-container
+          *ngTemplateOutlet="
+            confirmationPopupData?.contentTemplate;
+            context: { $implicit: confirmationPopupData?.templateContext }
+          "
+        >
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <div class="confirmation-popup__actions">
+      <button
+        class="wm-button-primary wm-auto-size wm-cancel confirmation-popup__button confirmation-popup__button-negative"
+        cdkFocusInitial
+        mat-button
+        [mat-dialog-close]="confirmationPopupData?.negativeReturnData || false"
+        data-test="WM_NG_COMPONENTS.CONFIRMATION_POPUP.NEGATIVE_BUTTON"
+      >
+        {{ confirmationPopupData?.negativeButtonLabel }}
+      </button>
+
+      <button
+        mat-button
+        class="wm-button-primary wm-auto-size confirmation-popup__button confirmation-popup__button-positive"
+        data-test="WM_NG_COMPONENTS.CONFIRMATION_POPUP.POSITIVE_BUTTON"
+        [mat-dialog-close]="confirmationPopupData?.positiveReturnData || true"
+      >
+        {{ confirmationPopupData?.positiveButtonLabel }}
+      </button>
+    </div>
+
+    <div
+      class="wm-subtitle-small confirmation-popup__hint"
+      *ngIf="confirmationPopupData?.hintContent"
+    >
+      <span data-test="WM_NG_COMPONENTS.CONFIRMATION_POPUP.HINT">
+        {{ confirmationPopupData?.hintContent }}
+      </span>
+    </div>
+  </div>
+</wm-wrapper>

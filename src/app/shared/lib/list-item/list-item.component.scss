@@ -1,0 +1,39 @@
+@import '../scss/colors';
+
+.wm-list-item {
+  $self: &;
+
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:not(&--selected):not(&--border):not(&--disabled):hover {
+    background: box-color(grey-lightest);
+  }
+
+  &--selected:not(&--disabled) {
+    background: box-color(secondary);
+  }
+
+  &--shadow {
+    box-shadow: 0px 3px 4px rgba(16, 45, 72, 0.06);
+  }
+
+  &--border {
+    border: 1px solid box-color(grey-lighter);
+
+    &:not(#{$self}--selected):not(#{$self}--disabled):hover {
+      border-color: box-color(grey-darkest);
+    }
+
+    &:not(#{$self}--selected):not(#{$self}--disabled):active {
+      background: box-color(grey-lightest);
+    }
+  }
+
+  &--disabled {
+    cursor: default;
+    box-shadow: none;
+  }
+}

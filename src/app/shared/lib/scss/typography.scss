@@ -1,0 +1,64 @@
+@mixin typography($font-weight, $font-size, $line-height, $letter-spacing: 'normal') {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+.wm {
+  &-h1 {
+    @include typography(300, 48px, 60px, -0.5px);
+  }
+
+  &-h2 {
+    @include typography(400, 34px, 52px);
+  }
+
+  &-h3 {
+    @include typography(400, 28px, 36px, 0.495px);
+  }
+
+  &-h4 {
+    @include typography(500, 20px, 28px, 0.495px);
+  }
+
+  &-h5 {
+    @include typography(500, 16px, 24px, 0.25px);
+  }
+
+  &-h6 {
+    @include typography(500, 14px, 20px, 0.2px);
+  }
+
+  &-subtitle {
+    @include typography(400, 14px, 20px, 0.2px);
+  }
+
+  &-subtitle-small {
+    @include typography(400, 11px, 16px, 0.2px);
+  }
+
+  &-text {
+    @include typography(300, 14px, 24px, 0.2px);
+  }
+
+  &-text-small {
+    @include typography(400, 11px, 20px, 0.2px);
+  }
+
+  &-cta {
+    @include typography(500, 14px, 20px, 0.2px);
+  }
+
+  &-caption {
+    @include typography(500, 12px, 16px, 0.25px);
+  }
+
+  &-caption-small {
+    @include typography(400, 10px, 14px, 0.2px);
+  }
+
+  &-overline {
+    @include typography(400, 12px, 16px, 0.25px);
+  }
+}

@@ -1,0 +1,132 @@
+@import '../scss/colors.scss';
+@import '../scss/typography.scss';
+
+.wm-card {
+  $self: &;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  background-color: box-color(white);
+  color: box-color(grey-darkest);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s;
+  user-select: none;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.4);
+
+    #{ $self }__title {
+      color: box-color(primary);
+    }
+  }
+
+  &--apps {
+    width: 266px;
+    height: 360px;
+    border-radius: 7.5px;
+    padding: 30px 29px 17px 24px;
+    text-align: left;
+  }
+
+  &--workspace {
+    width: 266px;
+    height: 280px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  &__icon {
+    #{ $self }--apps & {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+
+      i-feather {
+        stroke: box-color(grey-darker);
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &--selected {
+      i-feather {
+        fill: box-color(grey-darker);
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    user-select: none;
+
+    #{ $self }--apps & {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 20px;
+    }
+
+    #{ $self }--workspace & {
+      position: relative;
+      width: 98px;
+      height: 98px;
+      margin: 60px auto 28px;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 120px;
+        height: 120px;
+        border: 1px solid box-color(grey-lighter);
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__title {
+    color: box-color(grey-darkest);
+    margin: 0;
+    transition: all 0.5s;
+
+    #{ $self }--apps & {
+      @extend .wm-text;
+      font-weight: 700;
+    }
+
+    #{ $self }--workspace & {
+      @extend .wm-h6;
+    }
+  }
+
+  &__tagline,
+  &__subtitle,
+  &__description {
+    color: box-color(grey-darker);
+  }
+
+  &__description {
+    max-height: 160px;
+    overflow: scroll;
+    margin: 25px 0 0;
+    padding-right: 10px;
+  }
+
+  &__tagline {
+    margin: 14px 0 10px;
+  }
+
+  &__subtitle {
+    margin: 4px 0 10px;
+  }
+}

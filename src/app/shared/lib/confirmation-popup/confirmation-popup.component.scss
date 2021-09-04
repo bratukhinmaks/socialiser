@@ -1,0 +1,43 @@
+@import '../scss/fonts';
+@import '../scss/colors';
+
+.confirmation-popup {
+  display: flex;
+  flex-direction: column;
+
+  &__button {
+    &:first-of-type {
+      margin-right: 16px;
+    }
+  }
+
+  &__hint {
+    padding: 0 55px 14px 55px;
+    color: box-color(grey-darker);
+    text-align: center;
+  }
+
+  &__content {
+    text-align: center;
+    color: box-color(grey-darkest);
+    padding: 32px 32px 27px 32px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+
+    i-feather {
+      width: 24px;
+      height: 24px;
+      color: box-color(grey-darkest);
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 27px;
+  }
+}
